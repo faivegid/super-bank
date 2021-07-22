@@ -1,0 +1,13 @@
+C:\Users\hp\Documents\Projects\BankMS\BankMS\bin\Debug\netcoreapp3.1\BankMS.exe
+C:\Users\hp\Documents\Projects\BankMS\BankMS\bin\Debug\netcoreapp3.1\BankMS.deps.json
+C:\Users\hp\Documents\Projects\BankMS\BankMS\bin\Debug\netcoreapp3.1\BankMS.runtimeconfig.json
+C:\Users\hp\Documents\Projects\BankMS\BankMS\bin\Debug\netcoreapp3.1\BankMS.runtimeconfig.dev.json
+C:\Users\hp\Documents\Projects\BankMS\BankMS\bin\Debug\netcoreapp3.1\BankMS.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS\bin\Debug\netcoreapp3.1\BankMS.pdb
+C:\Users\hp\Documents\Projects\BankMS\BankMS\obj\Debug\netcoreapp3.1\BankMS.csproj.AssemblyReference.cache
+C:\Users\hp\Documents\Projects\BankMS\BankMS\obj\Debug\netcoreapp3.1\BankMS.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\Projects\BankMS\BankMS\obj\Debug\netcoreapp3.1\BankMS.AssemblyInfo.cs
+C:\Users\hp\Documents\Projects\BankMS\BankMS\obj\Debug\netcoreapp3.1\BankMS.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\Projects\BankMS\BankMS\obj\Debug\netcoreapp3.1\BankMS.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS\obj\Debug\netcoreapp3.1\BankMS.pdb
+C:\Users\hp\Documents\Projects\BankMS\BankMS\obj\Debug\netcoreapp3.1\BankMS.genruntimeconfig.cache
