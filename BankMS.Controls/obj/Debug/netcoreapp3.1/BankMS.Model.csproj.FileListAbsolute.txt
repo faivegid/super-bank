@@ -1,0 +1,9 @@
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Controls\bin\Debug\netcoreapp3.1\BankMS.Model.deps.json
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Controls\bin\Debug\netcoreapp3.1\BankMS.Model.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Controls\bin\Debug\netcoreapp3.1\BankMS.Model.pdb
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Controls\obj\Debug\netcoreapp3.1\BankMS.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Controls\obj\Debug\netcoreapp3.1\BankMS.Model.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Controls\obj\Debug\netcoreapp3.1\BankMS.Model.AssemblyInfo.cs
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Controls\obj\Debug\netcoreapp3.1\BankMS.Model.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Controls\obj\Debug\netcoreapp3.1\BankMS.Model.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Controls\obj\Debug\netcoreapp3.1\BankMS.Model.pdb

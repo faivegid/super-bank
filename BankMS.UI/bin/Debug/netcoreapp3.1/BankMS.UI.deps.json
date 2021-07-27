@@ -1,0 +1,81 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "BankMS.UI/1.0.0": {
+        "dependencies": {
+          "BankMS.Model": "1.0.0",
+          "Syncfusion.Shared.Base": "19.2.0.49",
+          "Validation": "1.0.0"
+        },
+        "runtime": {
+          "BankMS.UI.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/19.2.0.49": {
+        "runtime": {
+          "lib/netcoreapp3.1/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "19.2.0.49",
+            "fileVersion": "19.2.0.49"
+          }
+        }
+      },
+      "Syncfusion.Shared.Base/19.2.0.49": {
+        "dependencies": {
+          "Syncfusion.Licensing": "19.2.0.49"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Syncfusion.Shared.Base.dll": {
+            "assemblyVersion": "19.2310.0.49",
+            "fileVersion": "19.2310.0.49"
+          }
+        }
+      },
+      "BankMS.Model/1.0.0": {
+        "runtime": {
+          "BankMS.Model.dll": {}
+        }
+      },
+      "Validation/1.0.0": {
+        "runtime": {
+          "Validation.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BankMS.UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Syncfusion.Licensing/19.2.0.49": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HN0+d2ukdhS9MDZwHFyX5IkLNQszf4mPpCxVZh+CMGzfXcbrGnps91Pnkr6XP2t89jb3kxbJIg41PIM5/ZEX5w==",
+      "path": "syncfusion.licensing/19.2.0.49",
+      "hashPath": "syncfusion.licensing.19.2.0.49.nupkg.sha512"
+    },
+    "Syncfusion.Shared.Base/19.2.0.49": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-h+hHOtCOHyx9eE9Fel0rU7TMDULPQWRz4kXDdrmp+1PKeqU5Gieu4srWJ0ZV6h3BOmu4Yb3tyRaYiZQL/urljQ==",
+      "path": "syncfusion.shared.base/19.2.0.49",
+      "hashPath": "syncfusion.shared.base.19.2.0.49.nupkg.sha512"
+    },
+    "BankMS.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Validation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

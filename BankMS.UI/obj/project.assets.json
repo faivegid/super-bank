@@ -1,0 +1,212 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Syncfusion.Licensing/19.2.0.49": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Shared.Base/19.2.0.49": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.2.0.49"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Syncfusion.Shared.Base.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Syncfusion.Shared.Base.dll": {}
+        }
+      },
+      "BankMS.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/BankMS.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BankMS.Model.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "Validation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Validation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Validation.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Syncfusion.Licensing/19.2.0.49": {
+      "sha512": "HN0+d2ukdhS9MDZwHFyX5IkLNQszf4mPpCxVZh+CMGzfXcbrGnps91Pnkr6XP2t89jb3kxbJIg41PIM5/ZEX5w==",
+      "type": "package",
+      "path": "syncfusion.licensing/19.2.0.49",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10.0/Syncfusion.Licensing.dll",
+        "lib/MonoAndroid90/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net20/Syncfusion.Licensing.dll",
+        "lib/net35/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net451/Syncfusion.Licensing.dll",
+        "lib/net46/Syncfusion.Licensing.dll",
+        "lib/net5.0/Syncfusion.Licensing.dll",
+        "lib/netcoreapp3.1/Syncfusion.Licensing.dll",
+        "lib/netstandard1.0/Syncfusion.Licensing.dll",
+        "lib/netstandard1.2/Syncfusion.Licensing.dll",
+        "lib/netstandard1.4/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.19.2.0.49.nupkg.sha512",
+        "syncfusion.licensing.nuspec"
+      ]
+    },
+    "Syncfusion.Shared.Base/19.2.0.49": {
+      "sha512": "h+hHOtCOHyx9eE9Fel0rU7TMDULPQWRz4kXDdrmp+1PKeqU5Gieu4srWJ0ZV6h3BOmu4Yb3tyRaYiZQL/urljQ==",
+      "type": "package",
+      "path": "syncfusion.shared.base/19.2.0.49",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/Syncfusion.Shared.Base.dll",
+        "lib/net20/Syncfusion.Shared.Base.xml",
+        "lib/net35/Syncfusion.Shared.Base.dll",
+        "lib/net35/Syncfusion.Shared.Base.xml",
+        "lib/net40/Syncfusion.Shared.Base.dll",
+        "lib/net40/Syncfusion.Shared.Base.xml",
+        "lib/net45/Syncfusion.Shared.Base.dll",
+        "lib/net45/Syncfusion.Shared.Base.xml",
+        "lib/net451/Syncfusion.Shared.Base.dll",
+        "lib/net451/Syncfusion.Shared.Base.xml",
+        "lib/net46/Syncfusion.Shared.Base.dll",
+        "lib/net46/Syncfusion.Shared.Base.xml",
+        "lib/net5.0-windows/Syncfusion.Shared.Base.dll",
+        "lib/net5.0-windows/Syncfusion.Shared.Base.xml",
+        "lib/netcoreapp3.1/Syncfusion.Shared.Base.dll",
+        "lib/netcoreapp3.1/Syncfusion.Shared.Base.xml",
+        "syncfusion.shared.base.19.2.0.49.nupkg.sha512",
+        "syncfusion.shared.base.nuspec",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "BankMS.Model/1.0.0": {
+      "type": "project",
+      "path": "../BankMS.Controls/BankMS.Model.csproj",
+      "msbuildProject": "../BankMS.Controls/BankMS.Model.csproj"
+    },
+    "Validation/1.0.0": {
+      "type": "project",
+      "path": "../../Validation/Validation.csproj",
+      "msbuildProject": "../../Validation/Validation.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "BankMS.Model >= 1.0.0",
+      "Syncfusion.Shared.Base >= 19.2.0.49",
+      "Validation >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\hp\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.UI\\BankMS.UI.csproj",
+      "projectName": "BankMS.UI",
+      "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.UI\\BankMS.UI.csproj",
+      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.UI\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {
+            "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Controls\\BankMS.Model.csproj": {
+              "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Controls\\BankMS.Model.csproj"
+            },
+            "C:\\Users\\hp\\Documents\\Projects\\Validation\\Validation.csproj": {
+              "projectPath": "C:\\Users\\hp\\Documents\\Projects\\Validation\\Validation.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "Syncfusion.Shared.Base": {
+            "target": "Package",
+            "version": "[19.2.0.49, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.15, 3.1.15]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.5.21302.13\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

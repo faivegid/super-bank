@@ -1,0 +1,28 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Guna.UI2.WinForms/2.0.1.9": {
+        "runtime": {
+          "lib/net40/Guna.UI2.dll": {
+            "assemblyVersion": "2.0.1.9",
+            "fileVersion": "2.0.1.9"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Guna.UI2.WinForms/2.0.1.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Sk7O0CkjEtb3xq2bMbhDfP+hvpzpIDs3/QwzTuYwARajEhYYtUvIZkT4v9zMKI93E6O0DIDpRmA8TLyBiL/+Ww==",
+      "path": "guna.ui2.winforms/2.0.1.9",
+      "hashPath": "guna.ui2.winforms.2.0.1.9.nupkg.sha512"
+    }
+  }
+}
