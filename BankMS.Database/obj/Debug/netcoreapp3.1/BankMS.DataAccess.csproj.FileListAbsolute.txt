@@ -1,0 +1,15 @@
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\bin\Debug\netcoreapp3.1\BankMS.DataAccess.deps.json
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\bin\Debug\netcoreapp3.1\BankMS.DataAccess.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\bin\Debug\netcoreapp3.1\BankMS.DataAccess.pdb
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\bin\Debug\netcoreapp3.1\BankMS.Model.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\bin\Debug\netcoreapp3.1\BankMS.Model.pdb
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\obj\Debug\netcoreapp3.1\BankMS.DataAccess.csproj.AssemblyReference.cache
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\obj\Debug\netcoreapp3.1\BankMS.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\obj\Debug\netcoreapp3.1\BankMS.DataAccess.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\obj\Debug\netcoreapp3.1\BankMS.DataAccess.AssemblyInfo.cs
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\obj\Debug\netcoreapp3.1\BankMS.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\obj\Debug\netcoreapp3.1\BankMS.DataAccess.csproj.CopyComplete
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\obj\Debug\netcoreapp3.1\BankMS.DataAccess.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\obj\Debug\netcoreapp3.1\BankMS.DataAccess.pdb
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\bin\Debug\netcoreapp3.1\BankMS.Core.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\bin\Debug\netcoreapp3.1\BankMS.Core.pdb

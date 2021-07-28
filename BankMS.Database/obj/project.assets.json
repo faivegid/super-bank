@@ -1,11 +1,52 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "BankMS.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "BankMS.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BankMS.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BankMS.Core.dll": {}
+        }
+      },
+      "BankMS.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/BankMS.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BankMS.Model.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BankMS.Core/1.0.0": {
+      "type": "project",
+      "path": "../BankMS.Core/BankMS.Core.csproj",
+      "msbuildProject": "../BankMS.Core/BankMS.Core.csproj"
+    },
+    "BankMS.Model/1.0.0": {
+      "type": "project",
+      "path": "../BankMS.Controls/BankMS.Model.csproj",
+      "msbuildProject": "../BankMS.Controls/BankMS.Model.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "BankMS.Core >= 1.0.0",
+      "BankMS.Model >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\hp\\.nuget\\packages\\": {},
@@ -14,9 +55,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Database\\BankMS.Database.csproj",
-      "projectName": "BankMS.Database",
-      "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Database\\BankMS.Database.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Database\\BankMS.DataAccess.csproj",
+      "projectName": "BankMS.DataAccess",
+      "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Database\\BankMS.DataAccess.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Database\\obj\\",
       "projectStyle": "PackageReference",
@@ -38,7 +79,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Controls\\BankMS.Model.csproj": {
+              "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Controls\\BankMS.Model.csproj"
+            },
+            "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Core\\BankMS.Core.csproj": {
+              "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Core\\BankMS.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

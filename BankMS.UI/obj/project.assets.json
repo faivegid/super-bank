@@ -23,6 +23,33 @@
           "lib/netcoreapp3.1/Syncfusion.Shared.Base.dll": {}
         }
       },
+      "BankMS.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "BankMS.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BankMS.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BankMS.Core.dll": {}
+        }
+      },
+      "BankMS.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "BankMS.Core": "1.0.0",
+          "BankMS.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BankMS.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BankMS.DataAccess.dll": {}
+        }
+      },
       "BankMS.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -107,6 +134,16 @@
         "tools/VisualStudioToolsManifest.xml"
       ]
     },
+    "BankMS.Core/1.0.0": {
+      "type": "project",
+      "path": "../BankMS.Core/BankMS.Core.csproj",
+      "msbuildProject": "../BankMS.Core/BankMS.Core.csproj"
+    },
+    "BankMS.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../BankMS.Database/BankMS.DataAccess.csproj",
+      "msbuildProject": "../BankMS.Database/BankMS.DataAccess.csproj"
+    },
     "BankMS.Model/1.0.0": {
       "type": "project",
       "path": "../BankMS.Controls/BankMS.Model.csproj",
@@ -120,6 +157,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "BankMS.Core >= 1.0.0",
+      "BankMS.DataAccess >= 1.0.0",
       "BankMS.Model >= 1.0.0",
       "Syncfusion.Shared.Base >= 19.2.0.49",
       "Validation >= 1.0.0"
@@ -159,6 +198,12 @@
           "projectReferences": {
             "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Controls\\BankMS.Model.csproj": {
               "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Controls\\BankMS.Model.csproj"
+            },
+            "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Core\\BankMS.Core.csproj": {
+              "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Core\\BankMS.Core.csproj"
+            },
+            "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Database\\BankMS.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Database\\BankMS.DataAccess.csproj"
             },
             "C:\\Users\\hp\\Documents\\Projects\\Validation\\Validation.csproj": {
               "projectPath": "C:\\Users\\hp\\Documents\\Projects\\Validation\\Validation.csproj"

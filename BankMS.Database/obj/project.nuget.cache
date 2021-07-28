@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pq3uWAbFY43eR9pwp6yf4ZVQtzTxdcwdXZChu62DFGwkyKXQJJXJeyQwq5GrvJJ1aMR2aC/ksYJQIbqE+3qcfw==",
+  "dgSpecHash": "u/brHLyluym3/wXpq4f+awbWwRObVJ84Ri2rnhsRppOFqoM6wb96lHOVOaL+EXWzKPKzmDEdPNxwHhg59UDUKw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Database\\BankMS.Database.csproj",
+  "projectFilePath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Database\\BankMS.DataAccess.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

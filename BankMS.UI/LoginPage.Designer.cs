@@ -92,7 +92,6 @@ namespace BankMS.UI
             this.label1.Size = new System.Drawing.Size(407, 44);
             this.label1.TabIndex = 3;
             this.label1.Text = "Welcome to Super Bank";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -105,7 +104,6 @@ namespace BankMS.UI
             this.label2.Size = new System.Drawing.Size(324, 28);
             this.label2.TabIndex = 4;
             this.label2.Text = "Sign in to continue to account";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblValidPassword
             // 
@@ -118,7 +116,6 @@ namespace BankMS.UI
             this.lblValidPassword.TabIndex = 12;
             this.lblValidPassword.Text = "Is Password Valid";
             this.lblValidPassword.Visible = false;
-            this.lblValidPassword.Click += new System.EventHandler(this.lblValidPassword_Click);
             // 
             // panelUser
             // 
@@ -177,7 +174,6 @@ namespace BankMS.UI
             this.label6.Size = new System.Drawing.Size(117, 34);
             this.label6.TabIndex = 11;
             this.label6.Text = "Sign in";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // panel1
             // 

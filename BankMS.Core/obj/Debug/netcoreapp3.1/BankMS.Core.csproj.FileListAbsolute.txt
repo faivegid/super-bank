@@ -1,0 +1,13 @@
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Core\obj\Debug\netcoreapp3.1\BankMS.Core.csproj.AssemblyReference.cache
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Core\obj\Debug\netcoreapp3.1\BankMS.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Core\obj\Debug\netcoreapp3.1\BankMS.Core.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Core\obj\Debug\netcoreapp3.1\BankMS.Core.AssemblyInfo.cs
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Core\obj\Debug\netcoreapp3.1\BankMS.Core.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Core\bin\Debug\netcoreapp3.1\BankMS.Core.deps.json
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Core\bin\Debug\netcoreapp3.1\BankMS.Core.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Core\bin\Debug\netcoreapp3.1\BankMS.Core.pdb
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Core\bin\Debug\netcoreapp3.1\BankMS.Model.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Core\bin\Debug\netcoreapp3.1\BankMS.Model.pdb
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Core\obj\Debug\netcoreapp3.1\BankMS.Core.csproj.CopyComplete
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Core\obj\Debug\netcoreapp3.1\BankMS.Core.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS.Core\obj\Debug\netcoreapp3.1\BankMS.Core.pdb

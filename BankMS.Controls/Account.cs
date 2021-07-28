@@ -3,28 +3,19 @@ using System.Collections.Generic;
 
 namespace BankMS.Model
 {
-    public enum AccountType { Current, Savings };
-    public class Transaction
-    {
-        public DateTime tDate;
-        public string tNote;
-        public string tAmount;
-    }
     public abstract class Account
     {
-        protected string Id;
-        public string AccountNumber { get; protected set; }
+        public string AccountID { get; protected set; }
+
+        public string AccountNumber { get; set; }
 
         protected decimal _balance;
 
         protected static int _accountSeed = 31023;
 
         protected decimal minBalance;
-
         public AccountType Type { get; protected set; }
-
-        public List<Transaction> Transactions { get; set; }
-
+        public List<Transaction> Transactions { get; set; } = new List<Transaction>();
         /// <summary>
         /// Transfer Funds between accounts
         /// </summary>
@@ -38,7 +29,7 @@ namespace BankMS.Model
                 Transactions.Add(new Transaction()
                 {
                     tAmount = amount.ToString("0.00"),
-                    tDate = DateTime.Now, 
+                    tDate = DateTime.Now,
                     tNote = $"Transfer to {account.AccountNumber}"
                 });
 
@@ -48,7 +39,7 @@ namespace BankMS.Model
                     tAmount = amount.ToString("0.00"),
                     tDate = DateTime.Now,
                     tNote = $"Credit from {AccountNumber}"
-                }) ;
+                });
             }
             throw new Exception("Insufficient Funds");
         }
@@ -64,10 +55,11 @@ namespace BankMS.Model
                 Debit(amount);
                 Transactions.Add(new Transaction()
                 {
+                    AccountNumber = AccountNumber,
                     tAmount = amount.ToString("0.00"),
                     tDate = DateTime.Now,
                     tNote = $"Withdrawal from ATM"
-                });
+                }); 
             }
             throw new Exception("Insufficient Funds");
         }
@@ -94,7 +86,7 @@ namespace BankMS.Model
                 tDate = DateTime.Now,
                 tNote = $"Bank Deposite"
             });
-        }        
+        }
 
         /// <summary>
         /// adds amount to balance

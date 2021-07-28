@@ -8,13 +8,18 @@ namespace BankMS.Model
     {
         public CurrentAccount(string UserId)
         {
-            Id = UserId;
+            AccountID = UserId;
             Type = AccountType.Current;
             minBalance = 0.00m;
             _balance = 0;
             AccountNumber = string.Concat(310, _accountSeed, 45);
-            Transactions = new List<Transaction>();
             _accountSeed += 45080;
+        }
+        public CurrentAccount(string userID, string AccountNumber)
+        {
+            AccountID = userID;
+            this.AccountNumber = AccountNumber;
+            Type = AccountType.Current;
         }
 
     }

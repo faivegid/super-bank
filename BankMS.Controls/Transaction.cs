@@ -1,8 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BankMS.Model
 {
-    
+    public class Transaction
+    {
+        public string AccountNumber;
+        public DateTime tDate;
+        public string tNote;
+        public string tAmount;
+    }
 }

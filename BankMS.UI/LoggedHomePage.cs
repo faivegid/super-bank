@@ -17,9 +17,7 @@ namespace BankMS.UI
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            LoginPage log = new LoginPage();
-            this.Close();
-            log.Show();
+            
         }
         private void btnAccounts_Click_1(object sender, EventArgs e)
         {

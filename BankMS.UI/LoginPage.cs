@@ -1,23 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace BankMS.UI
 {
-    
+
     public partial class LoginPage : Form
     {
-        RegPage rg = new RegPage();
+        RegPage rg;
         private string email;
         private string password;
 
-        public LoginPage()
+        public LoginPage(RegPage rg)
         {
-            InitializeComponent();
+           InitializeComponent();
+            this.rg = rg; 
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,30 +26,12 @@ namespace BankMS.UI
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblValidPassword_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             this.Hide();
-            rg.Show();
+             rg.Show();
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
@@ -63,6 +41,7 @@ namespace BankMS.UI
             lblEmailPassword.Text = "";
             email = txtEmail.Text;
             password = txtPassword.Text;
+
             try
             {
                 if (string.IsNullOrEmpty(email))
