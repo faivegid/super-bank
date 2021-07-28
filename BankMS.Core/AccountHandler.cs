@@ -27,9 +27,11 @@ namespace BankMS.Core
         /// </summary>
         /// <param name="amount"></param>
         /// <param name="account"></param>
-        public static void Tramsfer(decimal amount, string AccountNUmberFrom, string AccountNumberTo, IWriter writer)
+        public static void Tramsfer(string amount, string AccountNUmberFrom, string AccountNumberTo, IWriter writer)
         {
-            TransactionHandler.AddTransactions(amount.ToString("0.00"), AccountNumberTo, $"Credit from {AccountNumberTo}", writer);
+            TransactionHandler.AddTransactions("-"+amount, AccountNUmberFrom, $"Transfer to {AccountNumberTo}", writer);
+
+            TransactionHandler.AddTransactions(amount, AccountNumberTo, $"Credit from {AccountNUmberFrom}", writer);
         }
 
         /// <summary>
@@ -38,7 +40,7 @@ namespace BankMS.Core
         /// <param name="amount"></param>
         public static void WithDraw(string amount, string AccountNumber, IWriter writer)
         {
-            TransactionHandler.AddTransactions(amount, AccountNumber, $"Withdrawal from ATM", writer);
+            TransactionHandler.AddTransactions("-"+amount, AccountNumber, $"Withdrawal from ATM", writer);
 
         }
 

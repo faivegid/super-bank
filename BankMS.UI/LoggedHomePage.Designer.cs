@@ -60,11 +60,31 @@ namespace BankMS.UI
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Deposit = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cmbSelectAccount = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtDepositAmount = new System.Windows.Forms.TextBox();
             this.Withdrawal = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.withComboAcct = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.withAmount = new System.Windows.Forms.TextBox();
             this.Transfer = new System.Windows.Forms.TabPage();
+            this.btnTrf = new System.Windows.Forms.Button();
+            this.trfcomboBox = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.trfamount = new System.Windows.Forms.TextBox();
             this.Transactions = new System.Windows.Forms.TabPage();
+            this.transactcomboBox5 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.acctNumbindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.acctNum = new System.Windows.Forms.TextBox();
+            this.transactionView = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -79,8 +99,13 @@ namespace BankMS.UI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.TabController.SuspendLayout();
             this.Accounts.SuspendLayout();
+            this.Deposit.SuspendLayout();
+            this.Withdrawal.SuspendLayout();
+            this.Transfer.SuspendLayout();
+            this.Transactions.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.acctNumbindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionView)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -340,11 +365,12 @@ namespace BankMS.UI
             this.Accounts.Size = new System.Drawing.Size(708, 386);
             this.Accounts.TabIndex = 0;
             this.Accounts.Text = "Accounts";
+            this.Accounts.Click += new System.EventHandler(this.Accounts_Click);
             // 
             // cmbAccountNumber
             // 
             this.cmbAccountNumber.FormattingEnabled = true;
-            this.cmbAccountNumber.Location = new System.Drawing.Point(26, 177);
+            this.cmbAccountNumber.Location = new System.Drawing.Point(238, 135);
             this.cmbAccountNumber.Name = "cmbAccountNumber";
             this.cmbAccountNumber.Size = new System.Drawing.Size(298, 41);
             this.cmbAccountNumber.TabIndex = 1;
@@ -362,7 +388,7 @@ namespace BankMS.UI
             // lblBalance
             // 
             this.lblBalance.AutoSize = true;
-            this.lblBalance.Location = new System.Drawing.Point(43, 266);
+            this.lblBalance.Location = new System.Drawing.Point(247, 222);
             this.lblBalance.Name = "lblBalance";
             this.lblBalance.Size = new System.Drawing.Size(178, 33);
             this.lblBalance.TabIndex = 0;
@@ -371,7 +397,7 @@ namespace BankMS.UI
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(43, 90);
+            this.lblName.Location = new System.Drawing.Point(241, 66);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(150, 33);
             this.lblName.TabIndex = 0;
@@ -380,7 +406,7 @@ namespace BankMS.UI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 38);
+            this.label3.Location = new System.Drawing.Point(6, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(201, 33);
             this.label3.TabIndex = 0;
@@ -389,7 +415,7 @@ namespace BankMS.UI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 133);
+            this.label1.Location = new System.Drawing.Point(6, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(226, 33);
             this.label1.TabIndex = 0;
@@ -398,40 +424,238 @@ namespace BankMS.UI
             // Deposit
             // 
             this.Deposit.BackColor = System.Drawing.Color.Gainsboro;
+            this.Deposit.Controls.Add(this.button1);
+            this.Deposit.Controls.Add(this.cmbSelectAccount);
+            this.Deposit.Controls.Add(this.label5);
+            this.Deposit.Controls.Add(this.label4);
+            this.Deposit.Controls.Add(this.txtDepositAmount);
             this.Deposit.Location = new System.Drawing.Point(4, 84);
             this.Deposit.Name = "Deposit";
             this.Deposit.Padding = new System.Windows.Forms.Padding(3);
             this.Deposit.Size = new System.Drawing.Size(708, 386);
             this.Deposit.TabIndex = 1;
             this.Deposit.Text = "Deposit";
+            this.Deposit.Click += new System.EventHandler(this.Deposit_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.button1.Location = new System.Drawing.Point(319, 183);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 57);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Deposit";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnDeposit_Click);
+            // 
+            // cmbSelectAccount
+            // 
+            this.cmbSelectAccount.FormattingEnabled = true;
+            this.cmbSelectAccount.Location = new System.Drawing.Point(206, 71);
+            this.cmbSelectAccount.Name = "cmbSelectAccount";
+            this.cmbSelectAccount.Size = new System.Drawing.Size(240, 33);
+            this.cmbSelectAccount.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(74, 74);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(128, 25);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Select Account";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(123, 134);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 25);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Amount";
+            // 
+            // txtDepositAmount
+            // 
+            this.txtDepositAmount.Location = new System.Drawing.Point(206, 134);
+            this.txtDepositAmount.Name = "txtDepositAmount";
+            this.txtDepositAmount.Size = new System.Drawing.Size(240, 31);
+            this.txtDepositAmount.TabIndex = 0;
             // 
             // Withdrawal
             // 
             this.Withdrawal.BackColor = System.Drawing.Color.Gainsboro;
+            this.Withdrawal.Controls.Add(this.button2);
+            this.Withdrawal.Controls.Add(this.withComboAcct);
+            this.Withdrawal.Controls.Add(this.label6);
+            this.Withdrawal.Controls.Add(this.label7);
+            this.Withdrawal.Controls.Add(this.withAmount);
             this.Withdrawal.Location = new System.Drawing.Point(4, 84);
             this.Withdrawal.Name = "Withdrawal";
             this.Withdrawal.Size = new System.Drawing.Size(708, 386);
             this.Withdrawal.TabIndex = 2;
             this.Withdrawal.Text = "Withdrawal";
+            this.Withdrawal.Click += new System.EventHandler(this.Withdrawal_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Gainsboro;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.button2.Location = new System.Drawing.Point(303, 184);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 57);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Withdraw";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // withComboAcct
+            // 
+            this.withComboAcct.FormattingEnabled = true;
+            this.withComboAcct.Location = new System.Drawing.Point(190, 72);
+            this.withComboAcct.Name = "withComboAcct";
+            this.withComboAcct.Size = new System.Drawing.Size(240, 33);
+            this.withComboAcct.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(58, 75);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(128, 25);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Select Account";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(107, 135);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 25);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Amount";
+            // 
+            // withAmount
+            // 
+            this.withAmount.Location = new System.Drawing.Point(190, 135);
+            this.withAmount.Name = "withAmount";
+            this.withAmount.Size = new System.Drawing.Size(240, 31);
+            this.withAmount.TabIndex = 5;
             // 
             // Transfer
             // 
             this.Transfer.BackColor = System.Drawing.Color.Gainsboro;
+            this.Transfer.Controls.Add(this.btnTrf);
+            this.Transfer.Controls.Add(this.trfcomboBox);
+            this.Transfer.Controls.Add(this.label10);
+            this.Transfer.Controls.Add(this.label8);
+            this.Transfer.Controls.Add(this.label9);
+            this.Transfer.Controls.Add(this.acctNum);
+            this.Transfer.Controls.Add(this.trfamount);
             this.Transfer.Location = new System.Drawing.Point(4, 84);
             this.Transfer.Name = "Transfer";
             this.Transfer.Size = new System.Drawing.Size(708, 386);
             this.Transfer.TabIndex = 3;
             this.Transfer.Text = "Transfer";
+            this.Transfer.Click += new System.EventHandler(this.Transfer_Click);
+            // 
+            // btnTrf
+            // 
+            this.btnTrf.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnTrf.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.btnTrf.FlatAppearance.BorderSize = 2;
+            this.btnTrf.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.btnTrf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTrf.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnTrf.Location = new System.Drawing.Point(397, 253);
+            this.btnTrf.Name = "btnTrf";
+            this.btnTrf.Size = new System.Drawing.Size(127, 57);
+            this.btnTrf.TabIndex = 9;
+            this.btnTrf.Text = "Transfer";
+            this.btnTrf.UseVisualStyleBackColor = false;
+            this.btnTrf.Click += new System.EventHandler(this.btnTrf_Click);
+            // 
+            // trfcomboBox
+            // 
+            this.trfcomboBox.FormattingEnabled = true;
+            this.trfcomboBox.Location = new System.Drawing.Point(284, 54);
+            this.trfcomboBox.Name = "trfcomboBox";
+            this.trfcomboBox.Size = new System.Drawing.Size(240, 33);
+            this.trfcomboBox.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(19, 126);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(259, 25);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Select Account to transfer from";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(19, 57);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(259, 25);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Select Account to transfer from";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(190, 192);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 25);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Amount";
+            // 
+            // trfamount
+            // 
+            this.trfamount.Location = new System.Drawing.Point(284, 186);
+            this.trfamount.Name = "trfamount";
+            this.trfamount.Size = new System.Drawing.Size(240, 31);
+            this.trfamount.TabIndex = 5;
             // 
             // Transactions
             // 
             this.Transactions.BackColor = System.Drawing.Color.Gainsboro;
+            this.Transactions.Controls.Add(this.transactionView);
+            this.Transactions.Controls.Add(this.transactcomboBox5);
+            this.Transactions.Controls.Add(this.label11);
             this.Transactions.Location = new System.Drawing.Point(4, 84);
             this.Transactions.Margin = new System.Windows.Forms.Padding(10, 3, 19, 3);
             this.Transactions.Name = "Transactions";
             this.Transactions.Size = new System.Drawing.Size(708, 386);
             this.Transactions.TabIndex = 4;
             this.Transactions.Text = "Transactions";
+            this.Transactions.Click += new System.EventHandler(this.Transactions_Click);
+            // 
+            // transactcomboBox5
+            // 
+            this.transactcomboBox5.FormattingEnabled = true;
+            this.transactcomboBox5.Location = new System.Drawing.Point(158, 45);
+            this.transactcomboBox5.Name = "transactcomboBox5";
+            this.transactcomboBox5.Size = new System.Drawing.Size(240, 33);
+            this.transactcomboBox5.TabIndex = 8;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(26, 48);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(128, 25);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Select Account";
             // 
             // panel7
             // 
@@ -442,6 +666,24 @@ namespace BankMS.UI
             this.panel7.Size = new System.Drawing.Size(716, 483);
             this.panel7.TabIndex = 6;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            // 
+            // acctNum
+            // 
+            this.acctNum.Location = new System.Drawing.Point(284, 126);
+            this.acctNum.Name = "acctNum";
+            this.acctNum.Size = new System.Drawing.Size(240, 31);
+            this.acctNum.TabIndex = 5;
+            // 
+            // transactionView
+            // 
+            this.transactionView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.transactionView.Location = new System.Drawing.Point(17, 108);
+            this.transactionView.Name = "transactionView";
+            this.transactionView.RowHeadersWidth = 62;
+            this.transactionView.RowTemplate.Height = 33;
+            this.transactionView.Size = new System.Drawing.Size(668, 266);
+            this.transactionView.TabIndex = 9;
+            this.transactionView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.transactionView_CellContentClick);
             // 
             // LoggedHomePage
             // 
@@ -480,8 +722,17 @@ namespace BankMS.UI
             this.TabController.ResumeLayout(false);
             this.Accounts.ResumeLayout(false);
             this.Accounts.PerformLayout();
+            this.Deposit.ResumeLayout(false);
+            this.Deposit.PerformLayout();
+            this.Withdrawal.ResumeLayout(false);
+            this.Withdrawal.PerformLayout();
+            this.Transfer.ResumeLayout(false);
+            this.Transfer.PerformLayout();
+            this.Transactions.ResumeLayout(false);
+            this.Transactions.PerformLayout();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.acctNumbindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -523,5 +774,25 @@ namespace BankMS.UI
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.ComboBox cmbAccountNumber;
         private System.Windows.Forms.BindingSource acctNumbindingSource;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbSelectAccount;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtDepositAmount;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox withComboAcct;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox withAmount;
+        private System.Windows.Forms.Button btnTrf;
+        private System.Windows.Forms.ComboBox trfcomboBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox trfamount;
+        private System.Windows.Forms.ComboBox transactcomboBox5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox acctNum;
+        private System.Windows.Forms.DataGridView transactionView;
     }
 }

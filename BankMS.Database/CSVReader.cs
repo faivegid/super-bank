@@ -25,7 +25,7 @@ namespace BankMS.DataAccess
             string[] transactionArray = File.ReadAllLines(transactionFilePath);
             var transcation = from line in transactionArray
                               where line != ""
-                              select (AccountNumber: line.Split(',')[0], Amount: line.Split(',')[1], Note: line.Split(',')[2], Date: line.Split(' ')[3]);
+                              select (AccountNumber: line.Split(',')[0], Amount: line.Split(',')[1], Note: line.Split(',')[2], Date: line.Split(',')[3]);
             return transcation;
         }
 
