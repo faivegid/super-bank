@@ -32,7 +32,7 @@ namespace BankMS.UI
             lblName.Text = userName;
             lblUserName.Text = userName;
             initialisedDatatSource();
-
+            CreateTabel();
         }
 
         private void initialisedDatatSource()
@@ -40,10 +40,9 @@ namespace BankMS.UI
             var dataSource = accounts.Select(account => account.AccountNumber).ToList();
             cmbAccountNumber.DataSource = dataSource;
             cmbSelectAccount.DataSource = dataSource;
-            withComboAcct.DataSource =dataSource;
+            withComboAcct.DataSource = dataSource;
             trfcomboBox.DataSource = dataSource;
-            transactcomboBox5.DataSource =dataSource;
-            transactionView.DataSource = transactions.Select(x => new[] { x.Date, x.AccountNumber, x.Amount, x.Note }).ToList();
+            transactcomboBox5.DataSource = dataSource;
         }
 
         private void LoggedHomePage_Load(object sender, EventArgs e)
@@ -176,6 +175,25 @@ namespace BankMS.UI
 
         private void transactionView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        public void CreateTabel()
+        {
+            List<string[]> transact = transactions.Select(x => new string[] { x.Date, x.AccountNumber, x.Amount, x.Note }).ToList();
+
+            //return transactions;
+            DataTable table = new DataTable();
+
+            table.Columns.Add("DATE", typeof(string));
+            table.Columns.Add("ACCOUNT NUMBER", typeof(string));
+            table.Columns.Add("TRANSACTION nOTE", typeof(string));
+            table.Columns.Add("AMOUNT", typeof(decimal));
+            for (int i = 0; i < transact.Count; i++)
+            {
+                table.Rows.Add(transact[i][0], transact[i][1], transact[i][3], transact[i][2]);
+            }
+            transactionView.DataSource = table;
 
         }
     }
