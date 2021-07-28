@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Validation\Validation.csproj" />
+    <ProjectReference Include="..\..\Validation\BankMS.Common.csproj" />
     <ProjectReference Include="..\BankMS.Controls\BankMS.Model.csproj" />
     <ProjectReference Include="..\BankMS.Core\BankMS.Core.csproj" />
     <ProjectReference Include="..\BankMS.Database\BankMS.DataAccess.csproj" />

@@ -29,6 +29,7 @@ namespace BankMS.UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoggedHomePage));
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -47,10 +48,23 @@ namespace BankMS.UI
             this.pnlTransfer = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnTransfer = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.pnlTransaction = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnTransactions = new System.Windows.Forms.Button();
+            this.TabController = new System.Windows.Forms.TabControl();
+            this.Accounts = new System.Windows.Forms.TabPage();
+            this.cmbAccountNumber = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblBalance = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Deposit = new System.Windows.Forms.TabPage();
+            this.Withdrawal = new System.Windows.Forms.TabPage();
+            this.Transfer = new System.Windows.Forms.TabPage();
+            this.Transactions = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.acctNumbindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccounts.SuspendLayout();
@@ -63,6 +77,10 @@ namespace BankMS.UI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnlTransaction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.TabController.SuspendLayout();
+            this.Accounts.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.acctNumbindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -106,6 +124,7 @@ namespace BankMS.UI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1002, 157);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblUserName
             // 
@@ -123,11 +142,12 @@ namespace BankMS.UI
             this.btnAccounts.FlatAppearance.BorderSize = 0;
             this.btnAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccounts.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAccounts.Location = new System.Drawing.Point(115, 0);
+            this.btnAccounts.Location = new System.Drawing.Point(3, 0);
             this.btnAccounts.Name = "btnAccounts";
-            this.btnAccounts.Size = new System.Drawing.Size(160, 55);
+            this.btnAccounts.Size = new System.Drawing.Size(264, 55);
             this.btnAccounts.TabIndex = 4;
             this.btnAccounts.Text = "Accounts";
+            this.btnAccounts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAccounts.UseVisualStyleBackColor = true;
             this.btnAccounts.Click += new System.EventHandler(this.btnAccounts_Click_1);
             this.btnAccounts.MouseLeave += new System.EventHandler(this.btnAccounts_MouseLeave);
@@ -140,7 +160,7 @@ namespace BankMS.UI
             this.pnlAccounts.Controls.Add(this.btnAccounts);
             this.pnlAccounts.Location = new System.Drawing.Point(12, 248);
             this.pnlAccounts.Name = "pnlAccounts";
-            this.pnlAccounts.Size = new System.Drawing.Size(287, 60);
+            this.pnlAccounts.Size = new System.Drawing.Size(268, 60);
             this.pnlAccounts.TabIndex = 5;
             this.pnlAccounts.Click += new System.EventHandler(this.btnAccounts_Click_1);
             this.pnlAccounts.MouseHover += new System.EventHandler(this.btnMouseHover);
@@ -162,7 +182,7 @@ namespace BankMS.UI
             this.pnlDeposite.Controls.Add(this.btnDeposite);
             this.pnlDeposite.Location = new System.Drawing.Point(12, 314);
             this.pnlDeposite.Name = "pnlDeposite";
-            this.pnlDeposite.Size = new System.Drawing.Size(287, 60);
+            this.pnlDeposite.Size = new System.Drawing.Size(268, 60);
             this.pnlDeposite.TabIndex = 5;
             // 
             // pictureBox2
@@ -179,11 +199,12 @@ namespace BankMS.UI
             this.btnDeposite.FlatAppearance.BorderSize = 0;
             this.btnDeposite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeposite.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDeposite.Location = new System.Drawing.Point(115, 1);
+            this.btnDeposite.Location = new System.Drawing.Point(0, 1);
             this.btnDeposite.Name = "btnDeposite";
-            this.btnDeposite.Size = new System.Drawing.Size(160, 55);
+            this.btnDeposite.Size = new System.Drawing.Size(267, 55);
             this.btnDeposite.TabIndex = 4;
             this.btnDeposite.Text = "Deposit";
+            this.btnDeposite.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDeposite.UseVisualStyleBackColor = true;
             this.btnDeposite.Click += new System.EventHandler(this.btnAccounts_Click_1);
             // 
@@ -194,7 +215,7 @@ namespace BankMS.UI
             this.pnlWtihdraw.Controls.Add(this.btnWithdraw);
             this.pnlWtihdraw.Location = new System.Drawing.Point(13, 381);
             this.pnlWtihdraw.Name = "pnlWtihdraw";
-            this.pnlWtihdraw.Size = new System.Drawing.Size(287, 60);
+            this.pnlWtihdraw.Size = new System.Drawing.Size(267, 60);
             this.pnlWtihdraw.TabIndex = 5;
             // 
             // pictureBox4
@@ -211,11 +232,12 @@ namespace BankMS.UI
             this.btnWithdraw.FlatAppearance.BorderSize = 0;
             this.btnWithdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWithdraw.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnWithdraw.Location = new System.Drawing.Point(114, 1);
+            this.btnWithdraw.Location = new System.Drawing.Point(4, 1);
             this.btnWithdraw.Name = "btnWithdraw";
-            this.btnWithdraw.Size = new System.Drawing.Size(160, 55);
+            this.btnWithdraw.Size = new System.Drawing.Size(262, 55);
             this.btnWithdraw.TabIndex = 4;
             this.btnWithdraw.Text = "Withdraw";
+            this.btnWithdraw.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnWithdraw.UseVisualStyleBackColor = true;
             this.btnWithdraw.Click += new System.EventHandler(this.btnAccounts_Click_1);
             // 
@@ -226,7 +248,7 @@ namespace BankMS.UI
             this.pnlTransfer.Controls.Add(this.btnTransfer);
             this.pnlTransfer.Location = new System.Drawing.Point(12, 448);
             this.pnlTransfer.Name = "pnlTransfer";
-            this.pnlTransfer.Size = new System.Drawing.Size(287, 60);
+            this.pnlTransfer.Size = new System.Drawing.Size(268, 60);
             this.pnlTransfer.TabIndex = 5;
             // 
             // pictureBox5
@@ -243,22 +265,14 @@ namespace BankMS.UI
             this.btnTransfer.FlatAppearance.BorderSize = 0;
             this.btnTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransfer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTransfer.Location = new System.Drawing.Point(115, 2);
+            this.btnTransfer.Location = new System.Drawing.Point(5, 2);
             this.btnTransfer.Name = "btnTransfer";
-            this.btnTransfer.Size = new System.Drawing.Size(160, 55);
+            this.btnTransfer.Size = new System.Drawing.Size(262, 55);
             this.btnTransfer.TabIndex = 4;
             this.btnTransfer.Text = "Transfer";
+            this.btnTransfer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTransfer.UseVisualStyleBackColor = true;
             this.btnTransfer.Click += new System.EventHandler(this.btnAccounts_Click_1);
-            // 
-            // panel7
-            // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(305, 157);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(697, 483);
-            this.panel7.TabIndex = 6;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // pnlTransaction
             // 
@@ -267,7 +281,7 @@ namespace BankMS.UI
             this.pnlTransaction.Controls.Add(this.btnTransactions);
             this.pnlTransaction.Location = new System.Drawing.Point(13, 514);
             this.pnlTransaction.Name = "pnlTransaction";
-            this.pnlTransaction.Size = new System.Drawing.Size(287, 60);
+            this.pnlTransaction.Size = new System.Drawing.Size(267, 60);
             this.pnlTransaction.TabIndex = 5;
             // 
             // pictureBox6
@@ -284,13 +298,150 @@ namespace BankMS.UI
             this.btnTransactions.FlatAppearance.BorderSize = 0;
             this.btnTransactions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransactions.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTransactions.Location = new System.Drawing.Point(115, 2);
+            this.btnTransactions.Location = new System.Drawing.Point(-2, 2);
             this.btnTransactions.Name = "btnTransactions";
-            this.btnTransactions.Size = new System.Drawing.Size(160, 55);
+            this.btnTransactions.Size = new System.Drawing.Size(258, 55);
             this.btnTransactions.TabIndex = 4;
             this.btnTransactions.Text = "Transactions";
+            this.btnTransactions.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTransactions.UseVisualStyleBackColor = true;
             this.btnTransactions.Click += new System.EventHandler(this.btnAccounts_Click_1);
+            // 
+            // TabController
+            // 
+            this.TabController.Controls.Add(this.Accounts);
+            this.TabController.Controls.Add(this.Deposit);
+            this.TabController.Controls.Add(this.Withdrawal);
+            this.TabController.Controls.Add(this.Transfer);
+            this.TabController.Controls.Add(this.Transactions);
+            this.TabController.ItemSize = new System.Drawing.Size(100, 80);
+            this.TabController.Location = new System.Drawing.Point(0, 6);
+            this.TabController.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
+            this.TabController.Name = "TabController";
+            this.TabController.SelectedIndex = 0;
+            this.TabController.Size = new System.Drawing.Size(716, 474);
+            this.TabController.TabIndex = 0;
+            // 
+            // Accounts
+            // 
+            this.Accounts.BackColor = System.Drawing.Color.Gainsboro;
+            this.Accounts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Accounts.Controls.Add(this.cmbAccountNumber);
+            this.Accounts.Controls.Add(this.label2);
+            this.Accounts.Controls.Add(this.lblBalance);
+            this.Accounts.Controls.Add(this.lblName);
+            this.Accounts.Controls.Add(this.label3);
+            this.Accounts.Controls.Add(this.label1);
+            this.Accounts.Font = new System.Drawing.Font("Helvetica", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Accounts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.Accounts.Location = new System.Drawing.Point(4, 84);
+            this.Accounts.Name = "Accounts";
+            this.Accounts.Padding = new System.Windows.Forms.Padding(3);
+            this.Accounts.Size = new System.Drawing.Size(708, 386);
+            this.Accounts.TabIndex = 0;
+            this.Accounts.Text = "Accounts";
+            // 
+            // cmbAccountNumber
+            // 
+            this.cmbAccountNumber.FormattingEnabled = true;
+            this.cmbAccountNumber.Location = new System.Drawing.Point(26, 177);
+            this.cmbAccountNumber.Name = "cmbAccountNumber";
+            this.cmbAccountNumber.Size = new System.Drawing.Size(298, 41);
+            this.cmbAccountNumber.TabIndex = 1;
+            this.cmbAccountNumber.SelectedIndexChanged += new System.EventHandler(this.cmbAccountNumber_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 225);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(229, 33);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Account Balance\r\n";
+            // 
+            // lblBalance
+            // 
+            this.lblBalance.AutoSize = true;
+            this.lblBalance.Location = new System.Drawing.Point(43, 266);
+            this.lblBalance.Name = "lblBalance";
+            this.lblBalance.Size = new System.Drawing.Size(178, 33);
+            this.lblBalance.TabIndex = 0;
+            this.lblBalance.Text = "acct Balance";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(43, 90);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(150, 33);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "acct Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(201, 33);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Account Name";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 133);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(226, 33);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Account Number";
+            // 
+            // Deposit
+            // 
+            this.Deposit.BackColor = System.Drawing.Color.Gainsboro;
+            this.Deposit.Location = new System.Drawing.Point(4, 84);
+            this.Deposit.Name = "Deposit";
+            this.Deposit.Padding = new System.Windows.Forms.Padding(3);
+            this.Deposit.Size = new System.Drawing.Size(708, 386);
+            this.Deposit.TabIndex = 1;
+            this.Deposit.Text = "Deposit";
+            // 
+            // Withdrawal
+            // 
+            this.Withdrawal.BackColor = System.Drawing.Color.Gainsboro;
+            this.Withdrawal.Location = new System.Drawing.Point(4, 84);
+            this.Withdrawal.Name = "Withdrawal";
+            this.Withdrawal.Size = new System.Drawing.Size(708, 386);
+            this.Withdrawal.TabIndex = 2;
+            this.Withdrawal.Text = "Withdrawal";
+            // 
+            // Transfer
+            // 
+            this.Transfer.BackColor = System.Drawing.Color.Gainsboro;
+            this.Transfer.Location = new System.Drawing.Point(4, 84);
+            this.Transfer.Name = "Transfer";
+            this.Transfer.Size = new System.Drawing.Size(708, 386);
+            this.Transfer.TabIndex = 3;
+            this.Transfer.Text = "Transfer";
+            // 
+            // Transactions
+            // 
+            this.Transactions.BackColor = System.Drawing.Color.Gainsboro;
+            this.Transactions.Location = new System.Drawing.Point(4, 84);
+            this.Transactions.Margin = new System.Windows.Forms.Padding(10, 3, 19, 3);
+            this.Transactions.Name = "Transactions";
+            this.Transactions.Size = new System.Drawing.Size(708, 386);
+            this.Transactions.TabIndex = 4;
+            this.Transactions.Text = "Transactions";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.TabController);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(286, 157);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(716, 483);
+            this.panel7.TabIndex = 6;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // LoggedHomePage
             // 
@@ -326,6 +477,11 @@ namespace BankMS.UI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pnlTransaction.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.TabController.ResumeLayout(false);
+            this.Accounts.ResumeLayout(false);
+            this.Accounts.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.acctNumbindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,7 +502,6 @@ namespace BankMS.UI
         private System.Windows.Forms.Button btnWithdraw;
         private System.Windows.Forms.Panel pnlTransfer;
         private System.Windows.Forms.Button btnTransfer;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -354,5 +509,19 @@ namespace BankMS.UI
         private System.Windows.Forms.Panel pnlTransaction;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btnTransactions;
+        private System.Windows.Forms.TabControl TabController;
+        private System.Windows.Forms.TabPage Accounts;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblBalance;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage Deposit;
+        private System.Windows.Forms.TabPage Withdrawal;
+        private System.Windows.Forms.TabPage Transfer;
+        private System.Windows.Forms.TabPage Transactions;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ComboBox cmbAccountNumber;
+        private System.Windows.Forms.BindingSource acctNumbindingSource;
     }
 }

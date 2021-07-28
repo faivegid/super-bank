@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankMS.Model", "BankMS.Cont
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankMS.DataAccess", "BankMS.Database\BankMS.DataAccess.csproj", "{B203F63F-5C0D-4792-B52B-64AEEA849105}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Validation", "..\Validation\Validation.csproj", "{7A3B01D6-7E87-4D9A-AB61-AE1B5BB69A1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankMS.Common", "..\Validation\BankMS.Common.csproj", "{7A3B01D6-7E87-4D9A-AB61-AE1B5BB69A1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankMS.Core", "BankMS.Core\BankMS.Core.csproj", "{102B021C-C271-441F-8F40-A62C2F752E82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankMS.Core", "BankMS.Core\BankMS.Core.csproj", "{102B021C-C271-441F-8F40-A62C2F752E82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

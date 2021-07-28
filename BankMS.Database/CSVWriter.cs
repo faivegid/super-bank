@@ -1,32 +1,30 @@
 ﻿using BankMS.Model;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace BankMS.DataAccess
 {
     public class CSVWriter : IWriter
     {
         string accountFilePath = @"C:\Users\hp\Documents\Projects\BankMS\DataBase\Accounts\AccountsDataBase.csv";
-        string transactionFilePath = @"C:\Users\hp\Documents\Projects\BankMS\DataBase\Transactions";
+        string transactionFilePath = @"C:\Users\hp\Documents\Projects\BankMS\DataBase\Transactions\Transactions.csv";
         string userFilePath = @"C:\Users\hp\Documents\Projects\BankMS\DataBase\Users\UserDataBase.csv";
 
         public bool SaveAccount(Account account)
         {
-            File.AppendAllText(accountFilePath, $"{account.AccountID},{account.AccountNumber},{account.Type}");
+            File.AppendAllText(accountFilePath, $"{account.AccountID},{account.AccountNumber},{account.Type}\n");
             return true;
         }
 
         public bool SaveTransactions(Transaction transaciton)
         {
-            File.AppendAllText(Path.Combine(transactionFilePath, $"{transaciton.AccountNumber}"), $"{transaciton.AccountNumber},{transaciton.tAmount},{transaciton.tNote},{transaciton.tDate}");
+            File.AppendAllText(transactionFilePath, $"{transaciton.AccountNumber}, {transaciton.tAmount},{transaciton.tNote},{transaciton.tDate.ToShortDateString()}\n");            
             return true;
         }
 
         public bool SaveUser(UserModel user)
         {
-            File.AppendAllText(userFilePath, $"{user.Id},{user.Email},{user.Password},{user.FirstName},{user.LastName}");
+            File.AppendAllLines(userFilePath, new List<string>(){ $"{user.Id},{user.Email},{user.Password},{user.FirstName},{user.LastName}\n"});
             return true;
         }
     }

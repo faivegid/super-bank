@@ -15,11 +15,11 @@ namespace BankMS.UI
         {
             IReader reader = new CSVReader();
             IWriter writer = new CSVWriter();
-            UserModel user = new UserModel();
+
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegPage(user));
+            Application.Run(new LoginPage(reader, writer));
         }
     }
 }

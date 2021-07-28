@@ -2,19 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "BankMS.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "BankMS.Model": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/BankMS.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BankMS.Core.dll": {}
-        }
-      },
       "BankMS.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -31,11 +18,6 @@
     }
   },
   "libraries": {
-    "BankMS.Core/1.0.0": {
-      "type": "project",
-      "path": "../BankMS.Core/BankMS.Core.csproj",
-      "msbuildProject": "../BankMS.Core/BankMS.Core.csproj"
-    },
     "BankMS.Model/1.0.0": {
       "type": "project",
       "path": "../BankMS.Controls/BankMS.Model.csproj",
@@ -44,7 +26,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "BankMS.Core >= 1.0.0",
       "BankMS.Model >= 1.0.0"
     ]
   },
@@ -82,9 +63,6 @@
           "projectReferences": {
             "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Controls\\BankMS.Model.csproj": {
               "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Controls\\BankMS.Model.csproj"
-            },
-            "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Core\\BankMS.Core.csproj": {
-              "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Core\\BankMS.Core.csproj"
             }
           }
         }

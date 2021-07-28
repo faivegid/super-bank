@@ -11,5 +11,3 @@ C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\obj\Debug\netcoreapp3.1\Ba
 C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\obj\Debug\netcoreapp3.1\BankMS.DataAccess.csproj.CopyComplete
 C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\obj\Debug\netcoreapp3.1\BankMS.DataAccess.dll
 C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\obj\Debug\netcoreapp3.1\BankMS.DataAccess.pdb
-C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\bin\Debug\netcoreapp3.1\BankMS.Core.dll
-C:\Users\hp\Documents\Projects\BankMS\BankMS.Database\bin\Debug\netcoreapp3.1\BankMS.Core.pdb

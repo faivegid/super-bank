@@ -7,7 +7,7 @@ namespace BankMS.Model
     {
         public string Id { get; set; }
 
-        [Required, RegularExpression(@"^[A-Z]{1}[a-z]*$", ErrorMessage ="Please enter a valid name eg 'Gideon'")]
+        [Required, RegularExpression(@"^[A-Z]{1}[a-z]*$", ErrorMessage = "Please enter a valid name eg 'Gideon'")]
         public string FirstName { get; set; }
 
         [Required, RegularExpression(@"^[A-Z]{1}[a-z]*$",
@@ -28,7 +28,7 @@ namespace BankMS.Model
 
         public UserModel()
         {
-            Id = new Guid().ToString().Substring(0,10);
+            Id = Guid.NewGuid().ToString().Substring(0, 10); ;
         }
 
     }

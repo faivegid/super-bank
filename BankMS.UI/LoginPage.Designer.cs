@@ -47,6 +47,8 @@ namespace BankMS.UI
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelUser.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -110,7 +112,7 @@ namespace BankMS.UI
             this.lblValidPassword.AutoSize = true;
             this.lblValidPassword.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblValidPassword.ForeColor = System.Drawing.Color.Red;
-            this.lblValidPassword.Location = new System.Drawing.Point(24, 449);
+            this.lblValidPassword.Location = new System.Drawing.Point(24, 457);
             this.lblValidPassword.Name = "lblValidPassword";
             this.lblValidPassword.Size = new System.Drawing.Size(167, 22);
             this.lblValidPassword.TabIndex = 12;
@@ -122,7 +124,7 @@ namespace BankMS.UI
             this.panelUser.BackColor = System.Drawing.Color.White;
             this.panelUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelUser.Controls.Add(this.txtEmail);
-            this.panelUser.Location = new System.Drawing.Point(21, 328);
+            this.panelUser.Location = new System.Drawing.Point(21, 331);
             this.panelUser.Name = "panelUser";
             this.panelUser.Size = new System.Drawing.Size(461, 40);
             this.panelUser.TabIndex = 9;
@@ -145,7 +147,7 @@ namespace BankMS.UI
             this.lblEmailPassword.AutoSize = true;
             this.lblEmailPassword.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblEmailPassword.ForeColor = System.Drawing.Color.Red;
-            this.lblEmailPassword.Location = new System.Drawing.Point(95, 299);
+            this.lblEmailPassword.Location = new System.Drawing.Point(108, 299);
             this.lblEmailPassword.Name = "lblEmailPassword";
             this.lblEmailPassword.Size = new System.Drawing.Size(295, 22);
             this.lblEmailPassword.TabIndex = 13;
@@ -157,7 +159,7 @@ namespace BankMS.UI
             this.lblEmailValidity.AutoSize = true;
             this.lblEmailValidity.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblEmailValidity.ForeColor = System.Drawing.Color.Red;
-            this.lblEmailValidity.Location = new System.Drawing.Point(24, 371);
+            this.lblEmailValidity.Location = new System.Drawing.Point(24, 370);
             this.lblEmailValidity.Name = "lblEmailValidity";
             this.lblEmailValidity.Size = new System.Drawing.Size(132, 22);
             this.lblEmailValidity.TabIndex = 14;
@@ -180,7 +182,7 @@ namespace BankMS.UI
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtPassword);
-            this.panel1.Location = new System.Drawing.Point(21, 404);
+            this.panel1.Location = new System.Drawing.Point(21, 412);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(460, 40);
             this.panel1.TabIndex = 9;
@@ -207,7 +209,7 @@ namespace BankMS.UI
             this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignIn.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
-            this.btnSignIn.Location = new System.Drawing.Point(95, 526);
+            this.btnSignIn.Location = new System.Drawing.Point(266, 526);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(124, 55);
             this.btnSignIn.TabIndex = 15;
@@ -224,7 +226,7 @@ namespace BankMS.UI
             this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignUp.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
-            this.btnSignUp.Location = new System.Drawing.Point(271, 526);
+            this.btnSignUp.Location = new System.Drawing.Point(93, 526);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(124, 55);
             this.btnSignUp.TabIndex = 15;
@@ -267,12 +269,35 @@ namespace BankMS.UI
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.label4.Location = new System.Drawing.Point(21, 307);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 23);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Email";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.label5.Location = new System.Drawing.Point(20, 388);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 23);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Password";
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label3);
@@ -288,11 +313,12 @@ namespace BankMS.UI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginPage";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.Log_Load);
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelUser.ResumeLayout(false);
             this.panelUser.PerformLayout();
@@ -323,5 +349,7 @@ namespace BankMS.UI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

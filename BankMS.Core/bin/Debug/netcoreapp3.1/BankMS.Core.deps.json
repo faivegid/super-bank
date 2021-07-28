@@ -8,10 +8,19 @@
     ".NETCoreApp,Version=v3.1": {
       "BankMS.Core/1.0.0": {
         "dependencies": {
+          "BankMS.DataAccess": "1.0.0",
           "BankMS.Model": "1.0.0"
         },
         "runtime": {
           "BankMS.Core.dll": {}
+        }
+      },
+      "BankMS.DataAccess/1.0.0": {
+        "dependencies": {
+          "BankMS.Model": "1.0.0"
+        },
+        "runtime": {
+          "BankMS.DataAccess.dll": {}
         }
       },
       "BankMS.Model/1.0.0": {
@@ -23,6 +32,11 @@
   },
   "libraries": {
     "BankMS.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BankMS.DataAccess/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

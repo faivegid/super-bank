@@ -7,8 +7,8 @@ namespace BankMS.DataAccess
 {
     public interface IReader
     {
-        IEnumerable<UserModel> GetUsers();
-        IEnumerable<Account> GetAccounts();
-        IEnumerable<Transaction> GetTransactions();
+        IEnumerable<(string Id, string Email, string Password, string FirstName, string LastName)> GetUsers();
+        IEnumerable<(string AccountId, string AccountNumber, string accountType)> GetAccounts();
+        IEnumerable<(string AccountNumber, string Amount, string Note, string Date)>  GetTransactions();
     }
 }

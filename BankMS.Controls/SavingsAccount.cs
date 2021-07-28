@@ -11,15 +11,8 @@ namespace BankMS.Model
             AccountID = UserId;
             Type = AccountType.Savings;
             minBalance = 1000.00m;
-            _balance = 0;
             AccountNumber = string.Concat(315, _accountSeed.ToString().Substring(0,3), 34, _accountSeed.ToString().Substring(3, 2));
             _accountSeed += 29081;
-        }
-        public SavingsAccount(string UserId, string accountNumber)
-        {
-            AccountID = UserId;
-            this.AccountNumber = AccountNumber;
-            Type = AccountType.Savings;
-        }
+        } 
     }
 }

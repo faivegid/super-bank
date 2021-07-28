@@ -95,6 +95,9 @@
             "projectReferences": {
               "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Controls\\BankMS.Model.csproj": {
                 "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Controls\\BankMS.Model.csproj"
+              },
+              "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Database\\BankMS.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Database\\BankMS.DataAccess.csproj"
               }
             }
           }
@@ -157,9 +160,6 @@
             "projectReferences": {
               "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Controls\\BankMS.Model.csproj": {
                 "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Controls\\BankMS.Model.csproj"
-              },
-              "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Core\\BankMS.Core.csproj": {
-                "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Core\\BankMS.Core.csproj"
               }
             }
           }
@@ -229,8 +229,8 @@
               "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Database\\BankMS.DataAccess.csproj": {
                 "projectPath": "C:\\Users\\hp\\Documents\\Projects\\BankMS\\BankMS.Database\\BankMS.DataAccess.csproj"
               },
-              "C:\\Users\\hp\\Documents\\Projects\\Validation\\Validation.csproj": {
-                "projectPath": "C:\\Users\\hp\\Documents\\Projects\\Validation\\Validation.csproj"
+              "C:\\Users\\hp\\Documents\\Projects\\Validation\\BankMS.Common.csproj": {
+                "projectPath": "C:\\Users\\hp\\Documents\\Projects\\Validation\\BankMS.Common.csproj"
               }
             }
           }
@@ -278,12 +278,12 @@
         }
       }
     },
-    "C:\\Users\\hp\\Documents\\Projects\\Validation\\Validation.csproj": {
+    "C:\\Users\\hp\\Documents\\Projects\\Validation\\BankMS.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Documents\\Projects\\Validation\\Validation.csproj",
-        "projectName": "Validation",
-        "projectPath": "C:\\Users\\hp\\Documents\\Projects\\Validation\\Validation.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Documents\\Projects\\Validation\\BankMS.Common.csproj",
+        "projectName": "BankMS.Common",
+        "projectPath": "C:\\Users\\hp\\Documents\\Projects\\Validation\\BankMS.Common.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\hp\\Documents\\Projects\\Validation\\obj\\",
         "projectStyle": "PackageReference",

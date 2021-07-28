@@ -1,18 +1,27 @@
-﻿using BankMS.Model;
+﻿using BankMS.Core;
+using BankMS.DataAccess;
+using BankMS.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BankMS.UI
 {
     public partial class RegPage : Form
     {
+        private IReader reader;
+        private IWriter writer;
+        IEnumerable<(string Id, string Email, string Password, string FirstName, string LastName)> Users;
         UserModel user;
-        public RegPage(UserModel user)
+        public RegPage(IReader reader, IWriter writer)
         {
             InitializeComponent();
-            this.user = user;
+            this.reader = reader;
+            this.writer = writer;
+            this.user = new UserModel();
+            Users = reader.GetUsers();
         }
 
         private void RegPage_Load(object sender, EventArgs e)
@@ -22,7 +31,7 @@ namespace BankMS.UI
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            LoginPage log = new LoginPage(this);
+            LoginPage log = new LoginPage(reader, writer);
             this.Close();
             log.Show();
         }
@@ -31,16 +40,26 @@ namespace BankMS.UI
             ResetValidators();
             regBindingSource.EndEdit();
             UserModel user = regBindingSource.Current as UserModel;
-            ValidatingRegForm(user);
-            MessageBox.Show("Sucessfull Registration", "Message",MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
-            LoginPage log = new LoginPage(this);
-            this.Hide();
-            log.Show();
-
+            if (ValidatingRegForm(user))
+            {                
+                UserHandler.CreateUser(user, writer);
+                if(cmbAccountType.SelectedIndex == 1)
+                    AccountHandler.CreateAccount(user.Id, AccountType.Current, writer);
+                AccountHandler.CreateAccount(user.Id, AccountType.Savings, writer);
+                MessageBox.Show("Sucessfull Registration", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoginPage log = new LoginPage(reader, writer);
+                this.Hide();
+                log.Show();
+            }            
         }
         private bool ValidatingRegForm(UserModel user)
         {
+            if (CheckEmail(user))
+            {
+                MessageBox.Show("Email already Exist Please Login or Register using different Email", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+
+            }
             ValidationContext context = new ValidationContext(user, null, null);
             IList<ValidationResult> errors = new List<ValidationResult>();
             if (!Validator.TryValidateObject(user, context, errors, true))
@@ -54,6 +73,7 @@ namespace BankMS.UI
             }
             else
             {
+
                 return true;
             }
         }
@@ -105,6 +125,11 @@ namespace BankMS.UI
             lblLastNameValidator.Text = "";
             lblEmailValidator.Text = "";
             lblRegPasswordValidator.Text = "";
+        }
+
+        private bool CheckEmail(UserModel user)
+        {
+            return Users.Where(existingUser => existingUser.Email == user.Email).Count() > 0;
         }
 
     }
