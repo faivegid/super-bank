@@ -38,6 +38,7 @@ namespace BankMS.UI
         private void initialisedDatatSource()
         {
             var dataSource = accounts.Select(account => account.AccountNumber).ToList();
+            acctNumbindingSource.DataSource = dataSource;
             cmbAccountNumber.DataSource = dataSource;
             cmbSelectAccount.DataSource = dataSource;
             withComboAcct.DataSource = dataSource;
@@ -114,6 +115,7 @@ namespace BankMS.UI
         private void Transactions_Click(object sender, EventArgs e)
         {
             transactcomboBox5.DataSource = accounts.Select(account => account.AccountNumber).ToList();
+           
         }
 
         private void Accounts_Click(object sender, EventArgs e)
@@ -127,7 +129,7 @@ namespace BankMS.UI
             bool success = int.TryParse(txtDepositAmount.Text, out amount);
             if (success && amount > 0)
             {
-                AccountHandler.Deposite(amount.ToString("0.00"), cmbSelectAccount.DisplayMember, writer);
+                AccountHandler.Deposite(amount.ToString("0.00"), cmbSelectAccount.SelectedItem.ToString(), writer);
                 MessageBox.Show("Sucessfull Deposit", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -139,22 +141,29 @@ namespace BankMS.UI
         private void btnTrf_Click(object sender, EventArgs e)
         {
             int amount = 0;
-            int acountTo = 0;
             bool success = int.TryParse(trfamount.Text, out amount);
-            bool accounSuccess = int.TryParse(acctNum.Text, out acountTo);
 
-            if (trfcomboBox.DisplayMember == acctNum.Text)
+            string acctranfer = acctNum.Text;
+
+            if (reader.GetAccounts().Where(account => account.AccountNumber == acctranfer).Count() > 0)
             {
-                AccountHandler.Tramsfer(amount.ToString("0.00"), trfcomboBox.DisplayMember, acountTo.ToString(), writer);
-                MessageBox.Show("Cant transfer to thesame account", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (success && amount > 0)
-            {
-                MessageBox.Show("Successfull Transfer", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (trfcomboBox.SelectedItem.ToString() == acctNum.Text)
+                {
+                    MessageBox.Show("Cant transfer to thesame account", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (success && amount > 0)
+                {
+                    AccountHandler.Tramsfer(amount.ToString("0.00"), trfcomboBox.SelectedItem.ToString(), acctranfer, writer);
+                    MessageBox.Show("Successfull Transfer", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Amount", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
-                MessageBox.Show("Invalid Amount", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Account does not exist please check and try again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
