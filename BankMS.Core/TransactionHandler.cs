@@ -6,15 +6,15 @@ namespace BankMS.Core
 {
     public class TransactionHandler
     {
-        public static void AddTransactions(string amount, string AccountNum, string note, IWriter writer)
+        public static Transaction AddTransactions(string amount, string AccountNum, string note)
         {
-            writer.SaveTransactions(new Transaction()
-            {
-                tAmount = amount,
-                tDate = DateTime.Now,
-                tNote = note,
-                AccountNumber = AccountNum
-            });
+            return new Transaction()
+                    {
+                        tAmount = amount,
+                        tDate = DateTime.Now,
+                        tNote = note,
+                        AccountNumber = AccountNum
+                    };
         }
     }
 }

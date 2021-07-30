@@ -124,6 +124,7 @@ namespace BankMS.UI
             this.panelUser.BackColor = System.Drawing.Color.White;
             this.panelUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelUser.Controls.Add(this.txtEmail);
+            this.panelUser.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.panelUser.Location = new System.Drawing.Point(21, 331);
             this.panelUser.Name = "panelUser";
             this.panelUser.Size = new System.Drawing.Size(461, 40);
@@ -135,7 +136,7 @@ namespace BankMS.UI
             this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEmail.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
             this.txtEmail.Location = new System.Drawing.Point(7, 7);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PlaceholderText = "Email";
@@ -182,7 +183,8 @@ namespace BankMS.UI
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtPassword);
-            this.panel1.Location = new System.Drawing.Point(21, 412);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Location = new System.Drawing.Point(21, 414);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(460, 40);
             this.panel1.TabIndex = 9;
@@ -193,12 +195,13 @@ namespace BankMS.UI
             this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPassword.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
             this.txtPassword.Location = new System.Drawing.Point(9, 6);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PlaceholderText = "Password";
             this.txtPassword.Size = new System.Drawing.Size(465, 25);
             this.txtPassword.TabIndex = 6;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnSignIn
             // 
@@ -314,6 +317,7 @@ namespace BankMS.UI
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
+            this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginPage";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;

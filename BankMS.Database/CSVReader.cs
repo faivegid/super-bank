@@ -16,6 +16,7 @@ namespace BankMS.DataAccess
             string[] accountArray = File.ReadAllLines(accountFilePath);
             IEnumerable<(string AccountId, string AccountNumber, string accountType)>
                 accountList = from line in accountArray
+                              where line != ""
                               select (AccountId: line.Split(',')[0], AccountNumber: line.Split(',')[1], accountType: line.Split(',')[2]);
             return accountList;
         }
@@ -24,7 +25,7 @@ namespace BankMS.DataAccess
         {
             string[] transactionArray = File.ReadAllLines(transactionFilePath);
             var transcation = from line in transactionArray
-                              where line != ""
+                              where line != ""                              
                               select (AccountNumber: line.Split(',')[0], Amount: line.Split(',')[1], Note: line.Split(',')[2], Date: line.Split(',')[3]);
             return transcation;
         }

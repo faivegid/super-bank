@@ -35,30 +35,29 @@ namespace BankMS.UI
             this.Close();
             log.Show();
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void btnRegSignUP_Click(object sender, EventArgs e)
         {
             ResetValidators();
             regBindingSource.EndEdit();
             UserModel user = regBindingSource.Current as UserModel;
-            if (ValidatingRegForm(user))
-            {                
-                UserHandler.CreateUser(user, writer);
-                if(cmbAccountType.SelectedIndex == 1)
-                    AccountHandler.CreateAccount(user.Id, AccountType.Current, writer);
-                AccountHandler.CreateAccount(user.Id, AccountType.Savings, writer);
+
+            if (!DoesErrorExistInRegForm(user))
+            {
+                writer.SaveUser(user);
+                writer.SaveAccount(AccountHandler.CreateAccount(
+                    user.Id, cmbAccountType.SelectedItem.ToString()));
                 MessageBox.Show("Sucessfull Registration", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoginPage log = new LoginPage(reader, writer);
                 this.Hide();
                 log.Show();
-            }            
+            }
         }
-        private bool ValidatingRegForm(UserModel user)
+        private bool DoesErrorExistInRegForm(UserModel user)
         {
-            if (CheckEmail(user))
+            if (DoesEmailExist(user))
             {
                 MessageBox.Show("Email already Exist Please Login or Register using different Email", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-
+                return true;
             }
             ValidationContext context = new ValidationContext(user, null, null);
             IList<ValidationResult> errors = new List<ValidationResult>();
@@ -69,13 +68,9 @@ namespace BankMS.UI
                     string memberString = string.Concat(result.MemberNames);
                     ErrorLogging(result, memberString);
                 }
-                return false;
-            }
-            else
-            {
-
                 return true;
             }
+            else { return false; }
         }
         private void ErrorLogging(ValidationResult result, string memberString)
         {
@@ -112,7 +107,6 @@ namespace BankMS.UI
                 false, DataSourceUpdateMode.OnPropertyChanged);
             txtRegPassword.DataBindings.Add("Text", regBindingSource, "Password",
                 false, DataSourceUpdateMode.OnPropertyChanged);
-            //cmbAccountType.DataBindings.Add("");
         }
         private void ResetValidators()
         {
@@ -126,8 +120,7 @@ namespace BankMS.UI
             lblEmailValidator.Text = "";
             lblRegPasswordValidator.Text = "";
         }
-
-        private bool CheckEmail(UserModel user)
+        private bool DoesEmailExist(UserModel user)
         {
             return Users.Where(existingUser => existingUser.Email == user.Email).Count() > 0;
         }

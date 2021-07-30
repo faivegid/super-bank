@@ -43,7 +43,7 @@ namespace BankMS.UI
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtRegEmail = new System.Windows.Forms.TextBox();
             this.cmbAccountType = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRegSignUP = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.regBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblFirstNameValidator = new System.Windows.Forms.Label();
@@ -202,19 +202,19 @@ namespace BankMS.UI
             this.cmbAccountType.TabIndex = 5;
             this.cmbAccountType.Text = "Account Type";
             // 
-            // button1
+            // btnRegSignUP
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(225, 676);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 50);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Sign Up";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRegSignUP.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.btnRegSignUP.FlatAppearance.BorderSize = 2;
+            this.btnRegSignUP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.btnRegSignUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegSignUP.Location = new System.Drawing.Point(225, 676);
+            this.btnRegSignUP.Name = "btnRegSignUP";
+            this.btnRegSignUP.Size = new System.Drawing.Size(150, 50);
+            this.btnRegSignUP.TabIndex = 6;
+            this.btnRegSignUP.Text = "Sign Up";
+            this.btnRegSignUP.UseVisualStyleBackColor = true;
+            this.btnRegSignUP.Click += new System.EventHandler(this.btnRegSignUP_Click);
             // 
             // linkLabel1
             // 
@@ -283,7 +283,7 @@ namespace BankMS.UI
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(600, 800);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRegSignUP);
             this.Controls.Add(this.cmbAccountType);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel2);
@@ -330,7 +330,7 @@ namespace BankMS.UI
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtRegEmail;
         private System.Windows.Forms.ComboBox cmbAccountType;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRegSignUP;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.BindingSource regBindingSource;
         private System.Windows.Forms.Label lblFirstNameValidator;

@@ -8,16 +8,14 @@ namespace BankMS.Core
 {
     public class AccountHandler
     {
-        public static void CreateAccount(string userID, AccountType accountType, IWriter writer)
+        public static Account CreateAccount(string userID, string accountType)
         {
             switch (accountType)
             {
-                case AccountType.Current:
-                    writer.SaveAccount(new CurrentAccount(userID));
-                    break;
-                case AccountType.Savings:
-                    writer.SaveAccount(new SavingsAccount(userID));
-                    break;
+                case "Current":
+                    return new CurrentAccount(userID);
+                case "Savings":
+                    return new SavingsAccount(userID);
                 default:
                     throw new ArgumentNullException();
             }
@@ -27,36 +25,36 @@ namespace BankMS.Core
         /// </summary>
         /// <param name="amount"></param>
         /// <param name="account"></param>
-        public static void Tramsfer(string amount, string AccountNUmberFrom, string AccountNumberTo, IWriter writer)
+        public static List<Transaction> Tramsfer(string amount, string AccountNUmberFrom, string AccountNumberTo)
         {
-            TransactionHandler.AddTransactions("-"+amount, AccountNUmberFrom, $"Transfer to {AccountNumberTo}", writer);
-
-            TransactionHandler.AddTransactions(amount, AccountNumberTo, $"Credit from {AccountNUmberFrom}", writer);
+            return new List<Transaction>(){
+                TransactionHandler.AddTransactions("-"+amount, AccountNUmberFrom, $"Transfer to {AccountNumberTo}"),
+                TransactionHandler.AddTransactions(amount, AccountNumberTo, $"Credit from {AccountNUmberFrom}")
+                };
         }
 
         /// <summary>
         /// Debits an the account by the specified amount
         /// </summary>
         /// <param name="amount"></param>
-        public static void WithDraw(string amount, string AccountNumber, IWriter writer)
+        public static Transaction WithDraw(string amount, string AccountNumber)
         {
-            TransactionHandler.AddTransactions("-"+amount, AccountNumber, $"Withdrawal from ATM", writer);
-
+            return TransactionHandler.AddTransactions("-" + amount, AccountNumber, $"Withdrawal from ATM");
         }
 
         /// <summary>
         /// Deposite money into account
         /// </summary>
         /// <param name="amount"></param>
-        public static void Deposite(string amount, string AccountNumber, IWriter writer)
+        public static Transaction Deposite(string amount, string AccountNumber)
         {
-            TransactionHandler.AddTransactions(amount, AccountNumber, $"Bank Deposite", writer);
+            return TransactionHandler.AddTransactions(amount, AccountNumber, $"Bank Deposite");
         }
 
         public static decimal GetBalance(IEnumerable<decimal> Amounts)
         {
             return Amounts.Sum();
         }
-        
+
     }
 }
