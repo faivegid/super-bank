@@ -13,8 +13,8 @@ namespace BankMS.UI
         [STAThread]
         static void Main()
         {
-            IReader reader = new CSVReader();
-            IWriter writer = new CSVWriter();
+            IReader reader = new SQLReader();
+            IWriter writer = new SQLWriter();
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();

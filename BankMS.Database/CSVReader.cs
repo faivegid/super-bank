@@ -40,5 +40,10 @@ namespace BankMS.DataAccess
                            Password: line.Split(',')[2], FirstName: line.Split(',')[3], LastName: line.Split(',')[4]);
             return userList;
         }
+
+        IEnumerable<(string Id, string Email, string Password, string Name)> IReader.GetUsers()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

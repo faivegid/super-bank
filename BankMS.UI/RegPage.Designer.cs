@@ -194,13 +194,14 @@ namespace BankMS.UI
             this.cmbAccountType.Font = new System.Drawing.Font("Helvetica Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbAccountType.FormattingEnabled = true;
             this.cmbAccountType.Items.AddRange(new object[] {
-            "Savings Account",
-            "Current Account"});
+            "Savings",
+            "Current"});
             this.cmbAccountType.Location = new System.Drawing.Point(65, 612);
             this.cmbAccountType.Name = "cmbAccountType";
             this.cmbAccountType.Size = new System.Drawing.Size(263, 33);
             this.cmbAccountType.TabIndex = 5;
             this.cmbAccountType.Text = "Account Type";
+            this.cmbAccountType.SelectedIndexChanged += new System.EventHandler(this.cmbAccountType_SelectedIndexChanged);
             // 
             // btnRegSignUP
             // 

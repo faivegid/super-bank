@@ -48,32 +48,36 @@ namespace BankMS.UI
             this.lblAccountBalance = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.Deposit = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtDepositAmount = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.cmbDeposit = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDepositAmount = new System.Windows.Forms.TextBox();
             this.Withdrawal = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.cmbWithdrawal = new System.Windows.Forms.ComboBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.withAmount = new System.Windows.Forms.TextBox();
+            this.cmbWithdrawal = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.Transfer = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.trfamount = new System.Windows.Forms.TextBox();
             this.btnTransfer = new System.Windows.Forms.Button();
+            this.acctNum = new System.Windows.Forms.TextBox();
             this.cmbTransfer = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.acctNum = new System.Windows.Forms.TextBox();
-            this.trfamount = new System.Windows.Forms.TextBox();
             this.Transactions = new System.Windows.Forms.TabPage();
             this.transactionView = new System.Windows.Forms.DataGridView();
             this.cmbTransactions = new System.Windows.Forms.ComboBox();
             this.CreateNew = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.btnCreateAccount = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
             this.cmbCreateNew = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.acctNumbindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,11 +87,15 @@ namespace BankMS.UI
             this.Accounts.SuspendLayout();
             this.panel3.SuspendLayout();
             this.Deposit.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.Withdrawal.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.Transfer.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.Transactions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.transactionView)).BeginInit();
             this.CreateNew.SuspendLayout();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.acctNumbindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,6 +140,7 @@ namespace BankMS.UI
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(739, 186);
@@ -285,11 +294,7 @@ namespace BankMS.UI
             // Deposit
             // 
             this.Deposit.BackColor = System.Drawing.Color.Gainsboro;
-            this.Deposit.Controls.Add(this.button1);
-            this.Deposit.Controls.Add(this.cmbDeposit);
-            this.Deposit.Controls.Add(this.label5);
-            this.Deposit.Controls.Add(this.label4);
-            this.Deposit.Controls.Add(this.txtDepositAmount);
+            this.Deposit.Controls.Add(this.panel4);
             this.Deposit.Location = new System.Drawing.Point(4, 84);
             this.Deposit.Name = "Deposit";
             this.Deposit.Padding = new System.Windows.Forms.Padding(3);
@@ -298,6 +303,28 @@ namespace BankMS.UI
             this.Deposit.Text = "Deposit";
             this.Deposit.Click += new System.EventHandler(this.Deposit_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.Controls.Add(this.txtDepositAmount);
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.cmbDeposit);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Location = new System.Drawing.Point(83, 21);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(557, 268);
+            this.panel4.TabIndex = 5;
+            // 
+            // txtDepositAmount
+            // 
+            this.txtDepositAmount.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDepositAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.txtDepositAmount.Location = new System.Drawing.Point(204, 127);
+            this.txtDepositAmount.Name = "txtDepositAmount";
+            this.txtDepositAmount.Size = new System.Drawing.Size(240, 31);
+            this.txtDepositAmount.TabIndex = 0;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Gainsboro;
@@ -305,62 +332,82 @@ namespace BankMS.UI
             this.button1.FlatAppearance.BorderSize = 2;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button1.Location = new System.Drawing.Point(319, 183);
+            this.button1.Location = new System.Drawing.Point(315, 192);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 57);
+            this.button1.Size = new System.Drawing.Size(127, 49);
             this.button1.TabIndex = 4;
             this.button1.Text = "Deposit";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.label4.Location = new System.Drawing.Point(106, 127);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 24);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Amount";
+            // 
             // cmbDeposit
             // 
+            this.cmbDeposit.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbDeposit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
             this.cmbDeposit.FormattingEnabled = true;
-            this.cmbDeposit.Location = new System.Drawing.Point(206, 71);
+            this.cmbDeposit.Location = new System.Drawing.Point(204, 63);
             this.cmbDeposit.Name = "cmbDeposit";
-            this.cmbDeposit.Size = new System.Drawing.Size(240, 33);
+            this.cmbDeposit.Size = new System.Drawing.Size(240, 32);
             this.cmbDeposit.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(74, 74);
+            this.label5.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.label5.Location = new System.Drawing.Point(43, 66);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 25);
+            this.label5.Size = new System.Drawing.Size(142, 24);
             this.label5.TabIndex = 2;
             this.label5.Text = "Select Account";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(123, 134);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 25);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Amount";
-            // 
-            // txtDepositAmount
-            // 
-            this.txtDepositAmount.Location = new System.Drawing.Point(206, 134);
-            this.txtDepositAmount.Name = "txtDepositAmount";
-            this.txtDepositAmount.Size = new System.Drawing.Size(240, 31);
-            this.txtDepositAmount.TabIndex = 0;
             // 
             // Withdrawal
             // 
             this.Withdrawal.BackColor = System.Drawing.Color.Gainsboro;
-            this.Withdrawal.Controls.Add(this.button2);
-            this.Withdrawal.Controls.Add(this.cmbWithdrawal);
-            this.Withdrawal.Controls.Add(this.label6);
-            this.Withdrawal.Controls.Add(this.label7);
-            this.Withdrawal.Controls.Add(this.withAmount);
+            this.Withdrawal.Controls.Add(this.panel5);
             this.Withdrawal.Location = new System.Drawing.Point(4, 84);
             this.Withdrawal.Name = "Withdrawal";
             this.Withdrawal.Size = new System.Drawing.Size(731, 323);
             this.Withdrawal.TabIndex = 2;
             this.Withdrawal.Text = "Withdrawal";
             this.Withdrawal.Click += new System.EventHandler(this.Withdrawal_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel5.Controls.Add(this.label6);
+            this.panel5.Controls.Add(this.button2);
+            this.panel5.Controls.Add(this.withAmount);
+            this.panel5.Controls.Add(this.cmbWithdrawal);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Location = new System.Drawing.Point(85, 20);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(557, 268);
+            this.panel5.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.label6.Location = new System.Drawing.Point(36, 67);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(142, 24);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Select Account";
             // 
             // button2
             // 
@@ -369,64 +416,80 @@ namespace BankMS.UI
             this.button2.FlatAppearance.BorderSize = 2;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button2.Location = new System.Drawing.Point(303, 184);
+            this.button2.Location = new System.Drawing.Point(319, 177);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 57);
+            this.button2.Size = new System.Drawing.Size(127, 51);
             this.button2.TabIndex = 9;
             this.button2.Text = "Withdraw";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.btnWithdrawal_Click);
             // 
-            // cmbWithdrawal
-            // 
-            this.cmbWithdrawal.FormattingEnabled = true;
-            this.cmbWithdrawal.Location = new System.Drawing.Point(190, 72);
-            this.cmbWithdrawal.Name = "cmbWithdrawal";
-            this.cmbWithdrawal.Size = new System.Drawing.Size(240, 33);
-            this.cmbWithdrawal.TabIndex = 8;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(58, 75);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 25);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Select Account";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(107, 135);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 25);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Amount";
-            // 
             // withAmount
             // 
-            this.withAmount.Location = new System.Drawing.Point(190, 135);
+            this.withAmount.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.withAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.withAmount.Location = new System.Drawing.Point(206, 122);
             this.withAmount.Name = "withAmount";
             this.withAmount.Size = new System.Drawing.Size(240, 31);
             this.withAmount.TabIndex = 5;
             // 
+            // cmbWithdrawal
+            // 
+            this.cmbWithdrawal.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbWithdrawal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.cmbWithdrawal.FormattingEnabled = true;
+            this.cmbWithdrawal.Location = new System.Drawing.Point(206, 67);
+            this.cmbWithdrawal.Name = "cmbWithdrawal";
+            this.cmbWithdrawal.Size = new System.Drawing.Size(240, 32);
+            this.cmbWithdrawal.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.label7.Location = new System.Drawing.Point(99, 125);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 24);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Amount";
+            // 
             // Transfer
             // 
             this.Transfer.BackColor = System.Drawing.Color.Gainsboro;
-            this.Transfer.Controls.Add(this.btnTransfer);
-            this.Transfer.Controls.Add(this.cmbTransfer);
-            this.Transfer.Controls.Add(this.label10);
-            this.Transfer.Controls.Add(this.label8);
-            this.Transfer.Controls.Add(this.label9);
-            this.Transfer.Controls.Add(this.acctNum);
-            this.Transfer.Controls.Add(this.trfamount);
+            this.Transfer.Controls.Add(this.panel6);
             this.Transfer.Location = new System.Drawing.Point(4, 84);
             this.Transfer.Name = "Transfer";
             this.Transfer.Size = new System.Drawing.Size(731, 323);
             this.Transfer.TabIndex = 3;
             this.Transfer.Text = "Transfer";
             this.Transfer.Click += new System.EventHandler(this.Transfer_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel6.Controls.Add(this.trfamount);
+            this.panel6.Controls.Add(this.btnTransfer);
+            this.panel6.Controls.Add(this.acctNum);
+            this.panel6.Controls.Add(this.cmbTransfer);
+            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.label10);
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Location = new System.Drawing.Point(70, 19);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(601, 280);
+            this.panel6.TabIndex = 11;
+            // 
+            // trfamount
+            // 
+            this.trfamount.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.trfamount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.trfamount.Location = new System.Drawing.Point(309, 161);
+            this.trfamount.Name = "trfamount";
+            this.trfamount.Size = new System.Drawing.Size(240, 31);
+            this.trfamount.TabIndex = 5;
             // 
             // btnTransfer
             // 
@@ -436,62 +499,65 @@ namespace BankMS.UI
             this.btnTransfer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
             this.btnTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransfer.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnTransfer.Location = new System.Drawing.Point(397, 253);
+            this.btnTransfer.Location = new System.Drawing.Point(422, 212);
             this.btnTransfer.Name = "btnTransfer";
-            this.btnTransfer.Size = new System.Drawing.Size(127, 57);
+            this.btnTransfer.Size = new System.Drawing.Size(127, 42);
             this.btnTransfer.TabIndex = 9;
             this.btnTransfer.Text = "Transfer";
             this.btnTransfer.UseVisualStyleBackColor = false;
             this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
             // 
+            // acctNum
+            // 
+            this.acctNum.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.acctNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.acctNum.Location = new System.Drawing.Point(309, 108);
+            this.acctNum.Name = "acctNum";
+            this.acctNum.Size = new System.Drawing.Size(240, 31);
+            this.acctNum.TabIndex = 5;
+            // 
             // cmbTransfer
             // 
+            this.cmbTransfer.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbTransfer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
             this.cmbTransfer.FormattingEnabled = true;
-            this.cmbTransfer.Location = new System.Drawing.Point(284, 54);
+            this.cmbTransfer.Location = new System.Drawing.Point(309, 52);
             this.cmbTransfer.Name = "cmbTransfer";
-            this.cmbTransfer.Size = new System.Drawing.Size(240, 33);
+            this.cmbTransfer.Size = new System.Drawing.Size(240, 32);
             this.cmbTransfer.TabIndex = 8;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.label9.Location = new System.Drawing.Point(213, 168);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 24);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Amount";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(19, 126);
+            this.label10.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.label10.Location = new System.Drawing.Point(16, 111);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(259, 25);
+            this.label10.Size = new System.Drawing.Size(287, 24);
             this.label10.TabIndex = 7;
             this.label10.Text = "Select Account to transfer from";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 57);
+            this.label8.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
+            this.label8.Location = new System.Drawing.Point(16, 55);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(259, 25);
+            this.label8.Size = new System.Drawing.Size(287, 24);
             this.label8.TabIndex = 7;
             this.label8.Text = "Select Account to transfer from";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(190, 192);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 25);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Amount";
-            // 
-            // acctNum
-            // 
-            this.acctNum.Location = new System.Drawing.Point(284, 126);
-            this.acctNum.Name = "acctNum";
-            this.acctNum.Size = new System.Drawing.Size(240, 31);
-            this.acctNum.TabIndex = 5;
-            // 
-            // trfamount
-            // 
-            this.trfamount.Location = new System.Drawing.Point(284, 186);
-            this.trfamount.Name = "trfamount";
-            this.trfamount.Size = new System.Drawing.Size(240, 31);
-            this.trfamount.TabIndex = 5;
             // 
             // Transactions
             // 
@@ -508,17 +574,17 @@ namespace BankMS.UI
             // transactionView
             // 
             this.transactionView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.transactionView.Location = new System.Drawing.Point(17, 52);
+            this.transactionView.Location = new System.Drawing.Point(33, 64);
             this.transactionView.Name = "transactionView";
             this.transactionView.RowHeadersWidth = 62;
             this.transactionView.RowTemplate.Height = 33;
-            this.transactionView.Size = new System.Drawing.Size(691, 263);
+            this.transactionView.Size = new System.Drawing.Size(662, 251);
             this.transactionView.TabIndex = 9;
             // 
             // cmbTransactions
             // 
             this.cmbTransactions.FormattingEnabled = true;
-            this.cmbTransactions.Location = new System.Drawing.Point(217, 9);
+            this.cmbTransactions.Location = new System.Drawing.Point(237, 17);
             this.cmbTransactions.Name = "cmbTransactions";
             this.cmbTransactions.Size = new System.Drawing.Size(240, 33);
             this.cmbTransactions.TabIndex = 8;
@@ -528,15 +594,24 @@ namespace BankMS.UI
             // CreateNew
             // 
             this.CreateNew.BackColor = System.Drawing.Color.Gainsboro;
-            this.CreateNew.Controls.Add(this.btnCreateAccount);
-            this.CreateNew.Controls.Add(this.label12);
-            this.CreateNew.Controls.Add(this.cmbCreateNew);
+            this.CreateNew.Controls.Add(this.panel7);
             this.CreateNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
             this.CreateNew.Location = new System.Drawing.Point(4, 84);
             this.CreateNew.Name = "CreateNew";
             this.CreateNew.Size = new System.Drawing.Size(731, 323);
             this.CreateNew.TabIndex = 5;
             this.CreateNew.Text = "Create New";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel7.Controls.Add(this.btnCreateAccount);
+            this.panel7.Controls.Add(this.cmbCreateNew);
+            this.panel7.Controls.Add(this.label12);
+            this.panel7.Location = new System.Drawing.Point(87, 55);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(557, 170);
+            this.panel7.TabIndex = 11;
             // 
             // btnCreateAccount
             // 
@@ -546,33 +621,34 @@ namespace BankMS.UI
             this.btnCreateAccount.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(60)))), ((int)(((byte)(105)))));
             this.btnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateAccount.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnCreateAccount.Location = new System.Drawing.Point(426, 175);
+            this.btnCreateAccount.Location = new System.Drawing.Point(352, 96);
             this.btnCreateAccount.Name = "btnCreateAccount";
-            this.btnCreateAccount.Size = new System.Drawing.Size(127, 57);
+            this.btnCreateAccount.Size = new System.Drawing.Size(127, 51);
             this.btnCreateAccount.TabIndex = 10;
             this.btnCreateAccount.Text = "Create";
             this.btnCreateAccount.UseVisualStyleBackColor = false;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(142, 104);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(119, 25);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Account Type";
             // 
             // cmbCreateNew
             // 
             this.cmbCreateNew.Cursor = System.Windows.Forms.Cursors.SizeNS;
             this.cmbCreateNew.Font = new System.Drawing.Font("Helvetica Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbCreateNew.FormattingEnabled = true;
-            this.cmbCreateNew.Location = new System.Drawing.Point(290, 101);
+            this.cmbCreateNew.Location = new System.Drawing.Point(216, 43);
             this.cmbCreateNew.Name = "cmbCreateNew";
             this.cmbCreateNew.Size = new System.Drawing.Size(263, 33);
             this.cmbCreateNew.TabIndex = 6;
             this.cmbCreateNew.Text = "Account Type";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Helvetica", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(51, 47);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(131, 24);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Account Type";
             // 
             // LoggedHomePage
             // 
@@ -599,15 +675,19 @@ namespace BankMS.UI
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.Deposit.ResumeLayout(false);
-            this.Deposit.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.Withdrawal.ResumeLayout(false);
-            this.Withdrawal.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.Transfer.ResumeLayout(false);
-            this.Transfer.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.Transactions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.transactionView)).EndInit();
             this.CreateNew.ResumeLayout(false);
-            this.CreateNew.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.acctNumbindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -659,5 +739,9 @@ namespace BankMS.UI
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
     }
 }

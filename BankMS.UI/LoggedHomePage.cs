@@ -95,15 +95,8 @@ namespace BankMS.UI
             bool success = decimal.TryParse(txtDepositAmount.Text, out amount);
             if (success && amount > 0)
             {
-                if (minBalance > balance - amount)
-                {
-                    MessageBox.Show("Insufficient Funds", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    writer.SaveTransactions(AccountHandler.Deposite(amount.ToString("0.00"), accountNum));
-                    MessageBox.Show("Sucessfull Deposit", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                writer.SaveTransactions(AccountRepository.Deposite(amount.ToString("0.00"), accountNum));
+                MessageBox.Show("Sucessfull Deposit", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -135,7 +128,7 @@ namespace BankMS.UI
                 }
                 else
                 {
-                    writer.SaveTransactions(AccountHandler.Deposite(amount.ToString("0.00"), accountNum));
+                    writer.SaveTransactions(AccountRepository.WithDraw(amount.ToString("0.00"), accountNum));
                     MessageBox.Show("Sucessfull Withdrawal", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -146,7 +139,7 @@ namespace BankMS.UI
         }
 
         private void Transfer_Click(object sender, EventArgs e)
-        {
+        {       
             cmbTransfer.DataSource = accounts.Select(account => account.AccountNumber).ToList();
         }
         private void btnTransfer_Click(object sender, EventArgs e)
@@ -154,7 +147,7 @@ namespace BankMS.UI
             int amount = 0;
             bool success = int.TryParse(trfamount.Text, out amount);
             string accountTransferTo = acctNum.Text;
-            if(cmbTransfer.SelectedValue == null)
+            if (cmbTransfer.SelectedValue == null)
             {
                 MessageBox.Show("Please select an account from the drop down", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -180,7 +173,7 @@ namespace BankMS.UI
                     }
                     else
                     {
-                        var transact = AccountHandler.Tramsfer(amount.ToString("0.00"), accountTransferFrom, accountTransferTo);
+                        var transact = AccountRepository.Tramsfer(amount.ToString("0.00"), accountTransferFrom, accountTransferTo);
                         foreach (var item in transact)
                             writer.SaveTransactions(item);
                         MessageBox.Show("Successfull Transfer", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -216,7 +209,7 @@ namespace BankMS.UI
             cmbWithdrawal.DataSource = dataSource;
             cmbTransfer.DataSource = dataSource;
             cmbTransactions.DataSource = dataSource;
-            cmbCreateNew.DataSource = new List<string> {"Savings", "Current" };
+            cmbCreateNew.DataSource = new List<string> { "Savings", "Current" };
         }
         private decimal CheckMinBalance(string accountNum)
         {
@@ -255,17 +248,17 @@ namespace BankMS.UI
                 return;
             };
             string accountType = cmbCreateNew.SelectedValue.ToString();
-            Account account = AccountHandler.CreateAccount(userId, accountType);
-            if(account != null)
+            Account account = AccountRepository.CreateAccount(userId, accountType);
+            if (account != null)
             {
                 writer.SaveAccount(account);
                 MessageBox.Show("Account Created Successfully", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                accounts = reader.GetAccounts().Where(aaccount => aaccount.AccountId == userId);
             }
             else
             {
                 MessageBox.Show("Account Creation UnSuccessfull due to network error", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-        }
+        }    
     }
 }

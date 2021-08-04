@@ -15,11 +15,11 @@ namespace BankMS.Model
         protected string GenerateAccountNum()
         {
             string rand = string.Concat(Guid.NewGuid().ToString().Take(20));
-            string pattern = @"\d";
-            MatchCollection matches = Regex.Matches(pattern, rand);
+            string pattern = @"[0-9]";
+            MatchCollection matches = Regex.Matches(rand, pattern);
             string numStr = string.Concat(matches);
-            int num = int.Parse(string.Concat(numStr.Take(4))) + int.Parse(string.Concat(numStr.Take(7)));
-            return string.Concat(num.ToString().Take(5));
+            numStr = string.Concat(numStr.Take(5));
+            return numStr;
         }
 
     }

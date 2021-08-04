@@ -4,7 +4,7 @@ using BankMS.Model;
 
 namespace BankMS.Core
 {
-    public class TransactionHandler
+    public class TransactionRepository
     {
         public static Transaction AddTransactions(string amount, string AccountNum, string note)
         {

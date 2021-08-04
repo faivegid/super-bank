@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace BankMS.Core
 {
-    public class AccountHandler
+    public class AccountRepository
     {
         public static Account CreateAccount(string userID, string accountType)
         {
@@ -28,8 +28,8 @@ namespace BankMS.Core
         public static List<Transaction> Tramsfer(string amount, string AccountNUmberFrom, string AccountNumberTo)
         {
             return new List<Transaction>(){
-                TransactionHandler.AddTransactions("-"+amount, AccountNUmberFrom, $"Transfer to {AccountNumberTo}"),
-                TransactionHandler.AddTransactions(amount, AccountNumberTo, $"Credit from {AccountNUmberFrom}")
+                TransactionRepository.AddTransactions("-"+amount, AccountNUmberFrom, $"Transfer to {AccountNumberTo}"),
+                TransactionRepository.AddTransactions(amount, AccountNumberTo, $"Credit from {AccountNUmberFrom}")
                 };
         }
 
@@ -39,7 +39,7 @@ namespace BankMS.Core
         /// <param name="amount"></param>
         public static Transaction WithDraw(string amount, string AccountNumber)
         {
-            return TransactionHandler.AddTransactions("-" + amount, AccountNumber, $"Withdrawal from ATM");
+            return TransactionRepository.AddTransactions("-" + amount, AccountNumber, $"Withdrawal from ATM");
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace BankMS.Core
         /// <param name="amount"></param>
         public static Transaction Deposite(string amount, string AccountNumber)
         {
-            return TransactionHandler.AddTransactions(amount, AccountNumber, $"Bank Deposite");
+            return TransactionRepository.AddTransactions(amount, AccountNumber, $"Bank Deposite");
         }
 
         public static decimal GetBalance(IEnumerable<decimal> Amounts)

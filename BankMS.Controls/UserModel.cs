@@ -16,7 +16,7 @@ namespace BankMS.Model
 
         public string Name
         {
-            get { return $"{LastName}, {FirstName}"; }
+            get { return LastName + ", " +  FirstName; }
         }
 
         [Required, EmailAddress]

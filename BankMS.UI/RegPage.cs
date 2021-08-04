@@ -13,7 +13,7 @@ namespace BankMS.UI
     {
         private IReader reader;
         private IWriter writer;
-        IEnumerable<(string Id, string Email, string Password, string FirstName, string LastName)> Users;
+        IEnumerable<(string Id, string Email, string Password, string Name)> Users;
         UserModel user;
         public RegPage(IReader reader, IWriter writer)
         {
@@ -31,9 +31,9 @@ namespace BankMS.UI
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            LoginPage log = new LoginPage(reader, writer);
+            this.Hide();
+            new LoginPage(reader, writer).Show();
             this.Close();
-            log.Show();
         }
         private void btnRegSignUP_Click(object sender, EventArgs e)
         {
@@ -44,7 +44,7 @@ namespace BankMS.UI
             if (!DoesErrorExistInRegForm(user))
             {
                 writer.SaveUser(user);
-                writer.SaveAccount(AccountHandler.CreateAccount(
+                writer.SaveAccount(AccountRepository.CreateAccount(
                     user.Id, cmbAccountType.SelectedItem.ToString()));
                 MessageBox.Show("Sucessfull Registration", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoginPage log = new LoginPage(reader, writer);
@@ -125,5 +125,9 @@ namespace BankMS.UI
             return Users.Where(existingUser => existingUser.Email == user.Email).Count() > 0;
         }
 
+        private void cmbAccountType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

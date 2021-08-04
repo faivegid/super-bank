@@ -28,3 +28,9 @@ C:\Users\hp\Documents\Projects\BankMS\BankMS.UI\bin\Debug\netcoreapp3.1\BankMS.C
 C:\Users\hp\Documents\Projects\BankMS\BankMS.UI\bin\Debug\netcoreapp3.1\BankMS.DataAccess.pdb
 C:\Users\hp\Documents\Projects\BankMS\BankMS.UI\bin\Debug\netcoreapp3.1\BankMS.Common.dll
 C:\Users\hp\Documents\Projects\BankMS\BankMS.UI\bin\Debug\netcoreapp3.1\BankMS.Common.pdb
+C:\Users\hp\Documents\Projects\BankMS\BankMS.UI\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS.UI\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS.UI\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS.UI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS.UI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\hp\Documents\Projects\BankMS\BankMS.UI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

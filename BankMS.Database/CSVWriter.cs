@@ -24,7 +24,7 @@ namespace BankMS.DataAccess
 
         public bool SaveUser(UserModel user)
         {
-            File.AppendAllLines(userFilePath, new List<string>(){ $"{user.Id},{user.Email},{user.Password},{user.FirstName},{user.LastName}\n"});
+            File.AppendAllLines(userFilePath, new List<string>(){ $"{user.Id},{user.Email},{user.Password},{user.Name}\n"});
             return true;
         }
     }

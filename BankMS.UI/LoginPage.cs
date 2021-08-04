@@ -14,7 +14,7 @@ namespace BankMS.UI
         private string password;
         private IReader reader;
         private IWriter writer;
-        IEnumerable<(string Id, string Email, string Password, string FirstName, string LastName)> Users;
+        IEnumerable<(string Id, string Email, string Password, string Name)> Users;
         public LoginPage(IReader reader, IWriter writer)
         {
             InitializeComponent();
@@ -41,7 +41,7 @@ namespace BankMS.UI
             Users = reader.GetUsers();
             if (ValidatinguserInput())
             {
-                var userr = Users.Where(existingUser => existingUser.Email == email).Select(user => (ID: user.Id, Name: string.Concat(user.FirstName, user.LastName))).ToList();
+                var userr = Users.Where(existingUser => existingUser.Email == email).Select(user => (ID: user.Id, Name: user.Name)).ToList();
                 
                 MessageBox.Show("Sucessfull Login", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
